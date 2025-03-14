@@ -1,0 +1,72 @@
+@use "../common/variables.scss" as v;
+@use "../common/mixin.scss" as m;
+
+.button {
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 12px;
+  text-transform: uppercase;
+  border: 2px solid transparent;
+  text-decoration: none;
+
+  @include m.tablet {
+    padding-top: 27px;
+    padding-bottom: 27px;
+  }
+}
+
+.button--light {
+  border-color: v.$white;
+  color: v.$white;
+}
+
+.button--dark {
+  border-color: v.$primary;
+  color: v.$primary;
+}
+
+.button--light:hover {
+  background-color: v.$white;
+  color: v.$light-blue;
+}
+.button--light:focus {
+  background-color: v.$white80;
+  color: v.$light-blue;
+  border-color: #000000;
+}
+.button--light:active {
+  background-color: v.$white;
+  color: v.$primary;
+}
+
+.button--light:disabled {
+  border-color: v.$white50;
+  color: v.$white50;
+}
+
+.button--dark:hover {
+  background: linear-gradient(90deg,v.$red 0%, v.$blue 100%);
+  border-color:inherit;
+  color: v.$white;
+}
+
+.button--dark:focus {
+  color: v.$white;
+  border-color: #000000;
+  background: linear-gradient(90deg, v.$red80 0%, v.$blue80 100%);}
+
+.button--dark:active {
+  color: v.$white70;
+  border-color: inherit;
+  background: linear-gradient(90deg,v.$red 0%, v.$blue 100%);
+}
+
+.button--dark:disabled {
+  border-color: v.$white30;
+  background-color: transparent;
+  color: v.$white30;
+}

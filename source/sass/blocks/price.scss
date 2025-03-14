@@ -1,0 +1,256 @@
+@use "../common/variables.scss" as v;
+@use "../common/mixin.scss" as m;
+
+.price {
+  @include m.container;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: v.$lightest-gray;
+
+  @include m.tablet {
+    padding-top: 60px;
+    padding-bottom: 62px;
+
+  }
+
+  @include m.desktop {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+.price__title {
+  text-align: center;
+  margin-bottom: 30px;
+  @include m.tablet {
+    margin-bottom: 38px;
+  }
+}
+
+.price__tabs {
+  @include m.list-reset;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto 30px auto;
+  border-bottom: 2px solid rgba(120, 120, 120, 0.2);
+
+  @include m.tablet {
+    width: 310px;
+    margin-bottom: 46px;
+  }
+
+  @include m.desktop {
+    width: 350px;
+  }
+}
+
+.price__tab {
+  position: relative;
+  font-size: 16px;
+  line-height: 16px;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  padding-bottom: 8px;
+  opacity: 0.5;
+
+  @include m.tablet {
+    padding-bottom: 6px;
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+
+
+.price__tab--active{
+  opacity: 1;
+}
+
+.price__tab--active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: v.$red;;
+  bottom: -2px;
+  left: 0;
+}
+
+.price__tab:hover,
+.price__tab:active {
+  color: v.$primary70
+}
+
+.price__tab:hover::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: v.$gray;
+  bottom: -2px;
+  left: 0;
+}
+
+.price__tab:active::after {
+  background-color: v.$red;
+}
+
+.price__tab:focus {
+  color: v.$primary;
+  opacity: 1;
+}
+
+.price__tab:hover::after {
+  background-color: v.$primary;
+  opacity: 1;
+}
+
+.price__tab:disabled {
+  color: v.$primary30
+}
+
+.price__tab:disabled::after {
+  background-color: v.$primary30;
+}
+
+.price__list {
+  @include m.list-reset;
+  display: none;
+
+}
+
+.price__list--active {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  @include m.tablet {
+    gap: 40px;
+  }
+
+  @include m.desktop {
+    flex-direction: row;
+  }
+}
+.price__item {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 50px 42px;
+  background-color: v.$white;
+  margin: 0 auto;
+
+  @include m.tablet {
+    padding: 65px;
+    gap: 21px;
+  }
+
+  @include m.desktop {
+    margin: 0;
+  }
+}
+
+.price__heading {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 100%;
+  text-align: center;
+  margin: 0;
+
+  @include m.tablet {
+    font-size: 24px;
+  }
+}
+
+.price__desk {
+  display: block;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+
+  @include m.tablet {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.price__wrapper {
+  position: relative;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.price__shadow {
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 150%;
+  text-align: center;
+  color: #e8e8e8;
+  margin: 0;
+  opacity: 0.5;
+
+  @include m.tablet {
+    font-size: 100px;
+    line-height: 150px;
+  }
+}
+
+.price__amound {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 72px;
+  text-align: center;
+  color: v.$light-blue;
+  margin: 0;
+  bottom: 0;
+  left: 18%;
+
+  @include m.tablet {
+    font-size: 60px;
+    line-height: 90px;
+    bottom: -2px;
+    left: 42px;
+    gap: 14px;
+  }
+}
+
+.price__amound::after {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 33px;
+  background-image: url("../../img/rub-icon.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: v.$primary;
+  @include m.tablet {
+    width: 31px;
+    height: 43px;
+  }
+}
+
+.price__button {
+  display: flex;
+  padding: 25px 47px;
+
+  @include m.tablet {
+    padding: 25px 69px;
+    margin-top: 2px;
+  }
+
+  @include m.desktop {
+    padding: 27px 59px;
+  }
+}
+
+.price__rub {
+  color: v.$primary;
+}

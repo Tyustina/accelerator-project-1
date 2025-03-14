@@ -1,0 +1,16 @@
+@use "../common/variables.scss" as v;
+@use "../common/mixin.scss" as m;
+
+.subtitle {
+  font-size: 18px;
+  line-height: 20px;
+  @include m.tablet {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  @include m.desktop {
+    font-size: 22px;
+    line-height: 22px;
+  }
+}

@@ -1,0 +1,125 @@
+@use "../common/variables.scss" as v;
+@use "../common/mixin.scss" as m;
+
+.video {
+  position: relative;
+  align-content: center;
+  justify-content: center;
+  margin: 0 auto;
+  @include m.tablet {
+    top: -85px;
+  }
+  @include m.desktop {
+    left: -200px;
+  }
+}
+
+.video__link {
+  @include m.tablet {
+    width: 270px;
+    height: 170px;
+  }
+
+  @include m.desktop {
+    width: 360px;
+    height: 230px;
+  }
+}
+
+.video__placeholder {
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  @include m.tablet {
+    width: 270px;
+    height: 170px;
+  }
+
+  @include m.desktop {
+    width: 360px;
+    height: 230px;
+  }
+}
+
+.video__button {
+  position: absolute;
+  content: "";
+  z-index: 10;
+  display: flex;
+  width: 52px;
+  height: 52px;
+  border-radius: 100%;
+  background: linear-gradient(90deg, v.$red 0%, v.$blue 100%);
+  top: 34%;
+  left: 42%;
+  @include m.tablet {
+    left: 40%;
+  }
+}
+
+.video__button::before {//треугольник
+  content: "";
+  position: absolute;
+  display: block;
+  right: 14px;
+  top: 20px;
+  border: 6px solid transparent;
+  border-left: 10px solid v.$white;
+}
+
+.video__button::after {//круглая рамка
+  content: "";
+  position: absolute;
+  display: block;
+  width: 72px;
+  height: 72px;
+  background-color: transparent;
+  border: 2px solid v.$red;
+  border-radius: 100%;
+  opacity: 0.2;
+  top: -10px;
+  left: -10px;
+}
+
+.video__button:hover,
+.video__button:active {
+  background: v.$white;
+}
+
+.video__button:hover::before {
+  border-left: 10px solid v.$primary60;;
+}
+
+.video__button:hover:after {
+  border-color: v.$primary60;
+}
+
+.video__button:focus {
+  background: v.$light-gray;
+}
+
+.video__button:focus::before,
+.video__button:active::before{
+  border-left: 10px solid v.$primary;;
+}
+.video__button:focus:after,
+.video__button:active:after {
+  border-color: v.$primary;
+}
+
+.video__button:disabled {
+  background: v.$white30;
+}
+
+.video__button:disabled:after {
+  border-color: v.$primary30;
+}
+
+.video__button:disabled:before {
+  border-left: 10px solid v.$primary30;;
+
+}
+
+
+
+

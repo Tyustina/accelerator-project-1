@@ -1,0 +1,107 @@
+@use "../common/variables.scss" as v;
+@use "../common/mixin.scss" as m;
+
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  padding-top: 40px;
+  padding-bottom: 34px;
+  @include m.tablet{
+    padding-top: 61px;
+  }
+  @include m.desktop {
+    @include m.container;
+   display: grid;
+   grid-template-columns: 355px 1fr;
+   padding-top: 120px;
+   padding-bottom: 240px;
+  }
+}
+
+.about__desk {
+  display: block;
+  margin-bottom: 35px;
+
+  @include m.desktop {
+    margin-bottom: 95px;
+  }
+}
+
+.about__title {
+  margin-bottom: 12px;
+
+  @include m.tablet {
+    margin-bottom: 20px;
+  }
+  @include m.desktop {
+    margin-bottom: 25px;
+  }
+}
+
+.about p {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 22px;
+  margin: 0;
+
+  @include m.tablet {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    padding: 0 100px;
+  }
+
+  @include m.desktop {
+    padding: 0;
+    text-align: left;
+  }
+}
+
+.about p:last-child {
+  display: none;
+
+  @include m.desktop {
+    display: block;
+    margin-top: 4px;
+  }
+}
+
+.about__text-wrapper {
+  @include m.container;
+  @include m.desktop {
+    padding: 0;
+    width: auto;
+  }
+}
+
+.about__media-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  margin: 0 auto;
+
+  @include m.tablet {
+    gap: 0;
+  }
+
+  @include m.desktop {
+    margin: 0;
+    align-items: flex-end;
+  }
+}
+
+.about__img {
+  width: 320px;
+  height: 280px;
+  background-size: cover;
+  @include m.tablet {
+    width: 678px;
+    height: 345px;
+  }
+
+  @include m.desktop {
+    width: 660px;
+    height: 400px;
+  }
+}

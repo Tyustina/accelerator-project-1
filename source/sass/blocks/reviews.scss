@@ -1,0 +1,46 @@
+@use "../common/variables.scss" as v;
+@use "../common/mixin.scss" as m;
+.reviews{
+  padding: 40px;
+  margin: 0 auto;
+}
+.reviews__title {
+  margin-bottom: 40px;
+}
+
+.reviews__list {
+  @include m.list-reset;
+}
+
+.reviews__item {
+  display: grid;
+  justify-items: center;
+  background-color: v.$dark-blue;
+  padding: 30px 25px;
+  color: v.$white;
+}
+
+.reviews__item h3 {
+  font-size: 18px;
+  line-height: 20px;
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.reviews__item p {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 22px;
+  margin: 0;
+  text-align: center;
+}
+
+.reviews__item div {
+  width: 68px;
+  height: 68px;
+  border-radius: 100%;
+  box-shadow: 0 0 40px 0 rgba(28, 51, 116, 0.2);
+  background-color: white;
+  margin-bottom: 10px;
+}
+

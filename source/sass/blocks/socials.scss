@@ -1,0 +1,66 @@
+@use "../common/variables.scss" as v;
+@use "../common/mixin.scss" as m;
+
+
+.socials__list {
+  @include m.list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  @include m.tablet {
+    gap: 15px;
+  }
+
+  @include m.desktop {
+    gap: 10px
+  }
+}
+
+.socials__link {
+  position: relative;
+  display: flex;
+  content: "";
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  background: v.$white;
+}
+
+.socials__link--vk::after{
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  content: "";
+  width: 14px;
+  height: 14px;
+  background-image: url("../../img/vk.svg");
+  color: v.$dark-blue;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.socials__link--ok::after{
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  content: "";
+  width: 14px;
+  height: 16px;
+  background-image: url("../../img/ok.svg");
+  color: v.$dark-blue;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.socials__link--reddit::after{
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-image: url("../../img/reddit.svg");
+  color: v.$dark-blue;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

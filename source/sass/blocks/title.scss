@@ -1,0 +1,19 @@
+@use "../common/variables.scss" as v;
+@use "../common/mixin.scss" as m;
+
+.title {
+  font-family: "Alumni Sans", sans-serif;
+  font-size: 32px;
+  line-height: 100%;
+  font-weight: 600;
+  margin: 0;
+
+  @include m.tablet {
+    font-size: 42px;
+    text-align: center;
+  }
+
+  @include m.desktop {
+    font-size: 54px;
+  }
+}

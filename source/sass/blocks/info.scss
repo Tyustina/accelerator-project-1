@@ -1,0 +1,61 @@
+@use "../common/variables.scss" as v;
+@use "../common/mixin.scss" as m;
+
+.info {
+  display: grid;
+
+  @include m.desktop {
+    grid-template-columns: 50% 50%;
+  }
+}
+
+.info__free-training {
+  @include m.container;
+  background-color: v.$primary;
+  @include m.desktop {
+    width: auto;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.info__wrapper {
+  color: v.$white;
+  padding: 70px 15px;
+
+  @include m.tablet {
+    padding: 60px 119px;
+  }
+
+  @include m.desktop {
+    padding: 60px 103px;
+  }
+}
+
+.info__title {
+  margin: 0;
+  margin-bottom: 36px;
+
+  @include m.tablet {
+    font-size: 54px;
+  }
+
+  @include m.desktop {
+  text-align: left;  }
+}
+
+.info__contacts {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @include m.tablet {
+    padding: 60px 119px;
+  }
+
+  @include m.desktop {
+    width: auto;
+    margin: 0;
+    padding: 60px 103px;
+    border-top: 1px solid v.$divider;
+  }
+}
