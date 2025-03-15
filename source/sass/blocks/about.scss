@@ -7,24 +7,32 @@
   gap: 36px;
   padding-top: 40px;
   padding-bottom: 34px;
-  @include m.tablet{
+
+  @include m.tablet {
     padding-top: 61px;
+    padding-bottom: 120px;
   }
+
   @include m.desktop {
     @include m.container;
-   display: grid;
-   grid-template-columns: 355px 1fr;
-   padding-top: 120px;
-   padding-bottom: 240px;
+    display: grid;
+    grid-template-columns: 355px 1fr;
+    padding-top: 120px;
+    padding-bottom: 242px;
   }
 }
 
 .about__desk {
   display: block;
-  margin-bottom: 35px;
+  margin-bottom: 36px;
+
+  @include m.tablet {
+    margin-bottom: 35px;
+  }
 
   @include m.desktop {
     margin-bottom: 95px;
+    text-align: left;
   }
 }
 
@@ -34,8 +42,11 @@
   @include m.tablet {
     margin-bottom: 20px;
   }
+
   @include m.desktop {
     margin-bottom: 25px;
+    text-align: left;
+
   }
 }
 
@@ -63,12 +74,13 @@
 
   @include m.desktop {
     display: block;
-    margin-top: 4px;
+    margin-top: 8px;
   }
 }
 
 .about__text-wrapper {
   @include m.container;
+
   @include m.desktop {
     padding: 0;
     width: auto;
@@ -76,12 +88,14 @@
 }
 
 .about__media-wrapper {
+
   display: flex;
   flex-direction: column;
   gap: 36px;
   margin: 0 auto;
 
   @include m.tablet {
+    position: relative;
     gap: 0;
   }
 
@@ -95,6 +109,7 @@
   width: 320px;
   height: 280px;
   background-size: cover;
+
   @include m.tablet {
     width: 678px;
     height: 345px;

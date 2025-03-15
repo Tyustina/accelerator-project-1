@@ -21,12 +21,16 @@
 .header__link {
   font-weight: 700;
   font-size: 22px;
-  line-height: 22px;
+  line-height: 100%;
   color: v.$white;
   text-decoration: none;
   @include m.tablet {
     font-size: 24px;
-    line-height: 24px;
+  }
+
+  @include m.desktop {
+    font-size: 26px;
+    margin-top: 2px;
   }
 }
 

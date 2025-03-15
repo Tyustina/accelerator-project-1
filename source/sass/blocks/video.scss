@@ -2,19 +2,25 @@
 @use "../common/mixin.scss" as m;
 
 .video {
-  position: relative;
+ position: relative;
   align-content: center;
-  justify-content: center;
   margin: 0 auto;
+
   @include m.tablet {
-    top: -85px;
+    position: absolute;
+    bottom: -85px;
+    left: 30%;
   }
+
   @include m.desktop {
-    left: -200px;
+    left: 9px;
+    bottom: -115px;
   }
 }
 
 .video__link {
+  display: block;
+
   @include m.tablet {
     width: 270px;
     height: 170px;
@@ -30,6 +36,7 @@
   position: absolute;
   top: 0;
   z-index: 2;
+
   @include m.tablet {
     width: 270px;
     height: 170px;
@@ -52,12 +59,22 @@
   background: linear-gradient(90deg, v.$red 0%, v.$blue 100%);
   top: 34%;
   left: 42%;
+
   @include m.tablet {
-    left: 40%;
+    top: 59px;
+    left: 109px;
+  }
+
+  @include m.desktop {
+    width: 72px;
+    height: 72px;
+    top: 79px;
+    left: 144px;
   }
 }
 
-.video__button::before {//треугольник
+.video__button::before {
+  //треугольник
   content: "";
   position: absolute;
   display: block;
@@ -65,9 +82,15 @@
   top: 20px;
   border: 6px solid transparent;
   border-left: 10px solid v.$white;
+
+  @include m.desktop {
+    right: 22px;
+    top: 30px;
+  }
 }
 
-.video__button::after {//круглая рамка
+.video__button::after {
+  //круглая рамка
   content: "";
   position: absolute;
   display: block;
@@ -79,6 +102,11 @@
   opacity: 0.2;
   top: -10px;
   left: -10px;
+
+  @include m.desktop {
+    width: 100px;
+    height: 100px;
+  }
 }
 
 .video__button:hover,
@@ -87,7 +115,8 @@
 }
 
 .video__button:hover::before {
-  border-left: 10px solid v.$primary60;;
+  border-left: 10px solid v.$primary60;
+  ;
 }
 
 .video__button:hover:after {
@@ -99,9 +128,11 @@
 }
 
 .video__button:focus::before,
-.video__button:active::before{
-  border-left: 10px solid v.$primary;;
+.video__button:active::before {
+  border-left: 10px solid v.$primary;
+  ;
 }
+
 .video__button:focus:after,
 .video__button:active:after {
   border-color: v.$primary;
@@ -116,10 +147,7 @@
 }
 
 .video__button:disabled:before {
-  border-left: 10px solid v.$primary30;;
+  border-left: 10px solid v.$primary30;
+  ;
 
 }
-
-
-
-

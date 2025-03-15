@@ -1,5 +1,6 @@
 @use "../common/variables.scss" as v;
 @use "../common/mixin.scss" as m;
+
 .hero {
   @include m.container;
 
@@ -8,17 +9,35 @@
     grid-template-columns: 1fr max-content;
     gap: 28px;
   }
+
   @include m.desktop {
-    gap: 56px;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
   }
 }
 
 .hero__img {
-  @include m.only-mobile{
+  @include m.only-mobile {
     display: none;
   }
-  width: 324px;
-  height: 390px;
+
+  @include m.tablet {
+    background-image: image-set(url("../../img/hero-img@2x.webp") 2x type("image/webp"),
+        url("../../img/hero-img.webp") 1x type("image/webp"),
+        url("../../img/hero-img@2x.jpg") 2x type("image/jpg"),
+        url("../../img/hero-img.jpg") 1x type("image/jpg"));
+    width: 324px;
+    height: 390px;
+  }
+
+  @include m.desktop {
+    background-image: image-set(url("../../img/hero-img-big@2x.webp") 2x type("image/webp"),
+        url("../../img/hero-img-big.webp") 1x type("image/webp"),
+        url("../../img/hero-img-big@2x.jpg") 2x type("image/jpg"),
+        url("../../img/hero-img-big.jpg") 1x type("image/jpg"));
+    width: 500px;
+    height: 524px;
+  }
 }
 
 .hero__title {
@@ -30,6 +49,7 @@
   letter-spacing: 0.02em;
   text-align: right;
   text-transform: uppercase;
+
   @include m.tablet {
     font-size: 72px;
     line-height: 85px;
@@ -40,6 +60,7 @@
     font-size: 92px;
     line-height: 110px;
     letter-spacing: 0.04em;
+    margin-right: 2px;
   }
 }
 
@@ -52,15 +73,17 @@
   text-align: right;
   margin-bottom: 14px;
   margin-top: 48px;
+
   @include m.tablet {
     margin-top: 0;
     margin-bottom: 10px;
     font-size: 42px;
+    margin-right: 2px;
   }
 
   @include m.desktop {
     font-size: 54px;
-    margin-bottom: 40px;
+    margin-bottom: 42px;
   }
 }
 
@@ -69,9 +92,15 @@
   font-size: 14px;
   line-height: 20px;
   text-align: right;
+
   @include m.tablet {
     line-height: 22px;
     padding-bottom: 26px;
+  }
+
+  @include m.desktop {
+    padding-bottom: 0;
+    margin-top: 12px;
   }
 }
 
@@ -81,8 +110,14 @@
   border-color: v.$white;
   padding-top: 22px;
   padding-bottom: 22px;
+
   @include m.tablet {
-    padding: 20px 38px;
+    padding: 20px 37px;
+    margin-right: 2px;
+  }
+
+  @include m.desktop {
+    padding: 26px 80px;
   }
 }
 
@@ -94,20 +129,29 @@
     padding-top: 32px;
     padding-bottom: 32px;
   }
+  @include m.desktop {
+    padding-top: 50px;
+    margin-right: 40px;
+
+  }
 }
+
 .hero__text-wrapper {
   display: grid;
   grid-template-columns: min-content min-content;
   gap: 21px;
   align-items: end;
   padding-bottom: 48px;
+
   @include m.tablet {
     gap: 26px;
-    padding-bottom: 48px;
+    padding-bottom: 49px;
+    align-items: center;
   }
 
   @include m.desktop {
+    grid-template-columns: 1fr 1fr;
     padding-bottom: 40px;
-    gap: 14px;
+    gap: 10px;
   }
 }

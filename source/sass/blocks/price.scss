@@ -8,6 +8,7 @@
   background-color: v.$lightest-gray;
 
   @include m.tablet {
+    position: relative;
     padding-top: 60px;
     padding-bottom: 62px;
 
@@ -19,11 +20,24 @@
   }
 }
 
+.price::after {
+  @include m.tablet {
+    position: absolute;
+    content: "";
+    width: 365px;
+    height: 378px;
+    bottom: 9px;
+    right:-41px;
+    background-image: url("../../img/price-decor.png");
+    z-index: 0;
+  }
+}
+
 .price__title {
   text-align: center;
   margin-bottom: 30px;
   @include m.tablet {
-    margin-bottom: 38px;
+    margin-bottom: 36px;
   }
 }
 
@@ -52,7 +66,7 @@
   border: none;
   background-color: transparent;
   padding: 0;
-  padding-bottom: 8px;
+  padding-bottom: 6px;
   opacity: 0.5;
 
   @include m.tablet {
@@ -119,7 +133,6 @@
 .price__list {
   @include m.list-reset;
   display: none;
-
 }
 
 .price__list--active {
@@ -145,6 +158,7 @@
   @include m.tablet {
     padding: 65px;
     gap: 21px;
+    z-index: 3;
   }
 
   @include m.desktop {
@@ -180,7 +194,6 @@
 .price__wrapper {
   position: relative;
   display: flex;
-  align-content: center;
   justify-content: center;
 }
 
@@ -226,7 +239,7 @@
   content: "";
   display: block;
   width: 24px;
-  height: 33px;
+  height: 34px;
   background-image: url("../../img/rub-icon.svg");
   background-repeat: no-repeat;
   background-size: contain;
