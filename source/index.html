@@ -409,44 +409,150 @@
       </div>
     </section>
     <section class="faq" data-test="faq">
-      <h2 class="faq__title title">Вопросы и ответы</h2>
-      <ul class="faq__tabs">
-        <li><button class="faq__tab" data-target-id="1">Центр</button></li>
-        <li><button class="faq__tab" data-target-id="2">Абонемент</button></li>
-        <li><button class="faq__tab" data-target-id="3">Услуги</button></li>
-        <li><button class="faq__tab" data-target-id="4">Правила</button></li>
-      </ul>
-      <ul class="faq__list">
-        <li class="faq__item">
-          <div>
-            <h3>Как стать членом фитнес-центра?</h3>
-            <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке
-              абонемента онлайн, анкета также заполняется онлайн и договор придёт вам на почту.</p>
-          </div>
-          <button class="faq__button faq__button--opened"></button>
-        </li>
-        <li class="faq__item">
-          <div>
-            <h3>Где можно посмотреть расписание?</h3>
-            <p>Вы можете ознакомиться с расписание на стойке информации, на нашем официальном сайте. Так же есть возможность оформить подписку на наши новости и получать расписание и обновления на почту каждую неделю.</p>
-          </div>
-          <button class="faq__button faq__button--closed"></button>
-        </li>
-        <li class="faq__item">
-          <div>
-            <h3>Есть кулеры в центре? Предоставляются полотенца?</h3>
-            <p></p>
-          </div>
-          <button class="faq__button faq__button--closed"></button>
-        </li>
-        <li class="faq__item">
-          <div>
-            <h3>Сколько тренеров работает в клубе и какова их квалификация?</h3>
-            <p></p>
-          </div>
-          <button class="faq__button faq__button--closed"></button>
-        </li>
-      </ul>
+      <div class="faq__wrapper">
+        <h2 class="faq__title title">Вопросы и ответы</h2>
+        <ul class="faq__tabs">
+          <li><button class="faq__tab faq__tab--active" data-target-id="1">Центр</button></li>
+          <li><button class="faq__tab" data-target-id="2">Абонемент</button></li>
+          <li><button class="faq__tab" data-target-id="3">Услуги</button></li>
+          <li><button class="faq__tab" data-target-id="4">Правила</button></li>
+        </ul>
+        <ul class="faq__list faq__list--active" data-id="1">
+          <li class="faq__item">
+            <div>
+              <h3>Как стать членом фитнес-центра?</h3>
+              <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке
+                абонемента онлайн, анкета также заполняется онлайн и договор придёт вам на почту.</p>
+            </div>
+            <button class="faq__button faq__button--closed"></button>
+          </li>
+          <li class="faq__item">
+            <div>
+              <h3>Где можно посмотреть расписание?</h3>
+              <p>Вы можете ознакомиться с расписание на стойке информации, на нашем официальном сайте. Так же есть
+                возможность оформить подписку на наши новости и получать расписание и обновления на почту каждую неделю.
+              </p>
+            </div>
+            <button class="faq__button faq__button--closed"></button>
+          </li>
+          <li class="faq__item">
+            <div>
+              <h3>Есть кулеры в центре? Предоставляются полотенца?</h3>
+              <p>В зале установлены несколько кулеров с водой и одноразовыми стаканчикаами. Полотенца вы можете взять на
+                ресепшене у администратора.</p>
+            </div>
+            <button class="faq__button faq__button--closed"></button>
+          </li>
+          <li class="faq__item">
+            <div>
+              <h3>Сколько тренеров работает в клубе и какова их квалификация?</h3>
+              <p>С актуальной информацией о тренерском составе и их квалификации можно ознакомиться в разделле "Жюри".
+              </p>
+            </div>
+            <button class="faq__button faq__button--closed"></button>
+          </li>
+        </ul>
+        <ul class="faq__list" data-id="2">
+          <li class="faq__item">
+            <div>
+              <h3>Занятия с тренером входят в абонемент?</h3>
+              <p>При посещении тренажерного зала вам необходимо оплатить занятия с тренером отдельно. В зале всегда
+                присутствует дежурный тренер, которому можно задать вопрос, получить небольшую консультацию по тренажеру
+                или технике выполнения упражнения.</p>
+            </div>
+            <button class="faq__button faq__button--closed"></button>
+          </li>
+          <li class="faq__item">
+            <div>
+              <h3>Можно ли заморозить абонемент?</h3>
+              <p>Заморозка возможна на абонементах сроком более 6 месяцев. Срок заморозки 2 недели, в случае болезни - заморозка возможна по справке от врача.
+              </p>
+            </div>
+            <button class="faq__button faq__button--closed"></button>
+          </li>
+          <li class="faq__item">
+            <div>
+              <h3>Есть ли лимит по посещениям тренажерного зала и групповых занятий?</h3>
+              <p>Лимиты по помещению предусмотрены только на абонементах с тренером, в остальных случаях лимит на посещения не ограничен.</p>
+            </div>
+            <button class="faq__button faq__button--closed"></button>
+          </li>
+          <li class="faq__item">
+            <div>
+              <h3>Что такое семейный доступ и доступ для друзей?</h3>
+              <p>Такой доступ позволяет использовать абонемент несколькими людьми (друзьями или семьей), указаными при покупке абонемента, но не всеми в один день.
+              </p>
+            </div>
+            <button class="faq__button faq__button--closed"></button>
+          </li>
+        </ul>
+        <ul class="faq__list" data-id="3">
+          <li class="faq__item">
+            <div>
+              <h3>Предлагает ли клуб услуги
+                по консультированию
+                по вопросам питания?</h3>
+              <p>Да. Вы можете обратиться как к своему тренеру, так и к нашему нутрициологу. Специалист уточнит ваши данные, цели и предложит программу питания.</p>
+            </div>
+            <button class="faq__button faq__button--closed"></button>
+          </li>
+          <li class="faq__item">
+            <div>
+              <h3>Проводятся ли в клубе какие-либо мероприятия или соревнования?</h3>
+              <p>Да, конечно. В клубе регулярно проводятся различные мероприятия. Актуальная информация всегда есть на нашем сайте и у администраторов.
+              </p>
+            </div>
+            <button class="faq__button faq__button--closed"></button>
+          </li>
+          <li class="faq__item">
+            <div>
+              <h3>Можно ли приобрести в центре спортивное питание?</h3>
+              <p>Спортивное питание можно приобрести в фитнес-баре.</p>
+            </div>
+            <button class="faq__button faq__button--closed"></button>
+          </li>
+          <li class="faq__item">
+            <div>
+              <h3>Есть ли в центре детская комната?</h3>
+              <p>В нашем клубе нет детской комнаты, но мы учтем пожелания и проведем опрос среди клиентов о необходимости.
+              </p>
+            </div>
+            <button class="faq__button faq__button--closed"></button>
+          </li>
+        </ul>
+        <ul class="faq__list" data-id="4">
+          <li class="faq__item">
+            <div>
+              <h3>Есть в фитнес-центре дресс-код?</h3>
+              <p>Для тренировок необходимо иметь предназначенную для этого закрытую спортивную обувь и одежду. Верхняя и нижняя части тела должны быть закрыты (используйте футболки, майки, спортивные брюки, шорты, кроссовки). В целях безопасности, запрещается тренироваться босиком, в пляжных или домашних тапочках и т. п., исключения составляют специальные классы (например, йога, пилатес). </p>
+            </div>
+            <button class="faq__button faq__button--closed"></button>
+          </li>
+          <li class="faq__item">
+            <div>
+              <h3>Можно ли приводить с собой детей на тренировки?</h3>
+              <p>Посещение с детьми не предусмотрено.
+              </p>
+            </div>
+            <button class="faq__button faq__button--closed"></button>
+          </li>
+          <li class="faq__item">
+            <div>
+              <h3>Какие дополнительные правила посещения центра?</h3>
+              <p>В клубе запрещено курение и распитие спиртных напитков.</p>
+            </div>
+            <button class="faq__button faq__button--closed"></button>
+          </li>
+          <li class="faq__item">
+            <div>
+              <h3>Нужна ли медицинская справка для посещения залов и бассейна?</h3>
+              <p>Для посещения бассейна необходима справка от терапевта. Для посещения зала справка не требуется.
+              </p>
+            </div>
+            <button class="faq__button faq__button--closed"></button>
+          </li>
+        </ul>
+      </div>
     </section>
     <section class="reviews" data-test="reviews">
       <h2 class="reviews__title title">Отзывы</h2>
