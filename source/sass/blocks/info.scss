@@ -21,7 +21,8 @@
 
 .info__wrapper {
   color: v.$white;
-  padding: 70px 15px;
+  padding-top: 70px;
+  padding-bottom: 70px;
 
   @include m.tablet {
     padding: 60px 119px;
@@ -45,11 +46,11 @@
 }
 
 .info__contacts {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 36px;
+  padding-bottom: 38px;
 
   @include m.tablet {
-    padding: 60px 119px;
+    padding: 60px 164px 50px 164px;
   }
 
   @include m.desktop {

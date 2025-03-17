@@ -3,16 +3,21 @@
 
 .games {
   @include m.container;
-  display: flex;
-  flex-direction: column;
+  display: grid;
   color: v.$white;
   padding-top: 25px;
   padding-bottom: 25px;
 
   @include m.tablet {
-    flex-direction: row;
+    grid-template-columns: 300px 378px;
     padding-top: 60px;
     padding-bottom: 60px;
+  }
+
+  @include m.desktop {
+    grid-template-columns: 500px 660px;
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
 }
 
@@ -27,8 +32,14 @@
   @include m.tablet {
     grid-template-columns: min-content 1fr;
     grid-template-rows: min-content min-content min-content;
-    column-gap: 20px;
+    column-gap: 22px;
     row-gap: 10px;
+  }
+
+  @include m.desktop {
+    padding: 60px 80px;
+    column-gap: 78px;
+    row-gap: 30px;
   }
 }
 
@@ -54,7 +65,11 @@
   gap: 4px;
 
   @include m.tablet {
-    gap: 10px;
+    gap: 20px;
+  }
+
+  @include m.desktop {
+    gap: 22px;
   }
 }
 
@@ -70,6 +85,10 @@
     font-size: 18px;
     line-height: 24px;
   }
+
+  @include m.desktop {
+    padding-bottom: 5px;
+  }
 }
 
 .games__block {
@@ -77,11 +96,22 @@
   flex-direction: column;
   gap: 2px;
 
-  @include m.desktop {
+  @include m.tablet {
     gap: 10px;
   }
-}
 
+  @include m.desktop {
+    gap: 7px;
+  }
+}
+.games__block--time {
+  @include m.tablet {
+    gap: 2px;
+  }
+  @include m.desktop {
+    gap: 7px;
+  }
+}
 .games__text {
   position: relative;
   font-weight: 700;
@@ -105,8 +135,16 @@
   left: 28%;
 
   @include m.tablet {
+    display: flex;
     font-size: 14px;
-    line-height: 14px;
+    line-height: 23px;
+    top: -10px;
+    left: 20%;
+  }
+
+  @include m.desktop {
+    top: -3px;
+    left: 27%;
   }
 }
 
@@ -117,6 +155,10 @@
   line-height: 20px;
   margin: 0;
   padding-right: 22px;
+  @include m.tablet {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
 
 .games__button {
@@ -126,7 +168,7 @@
   border-color: v.$white;
 
   @include m.tablet {
-    padding: 27px 56px;
+    padding: 25px 55px;
   }
 }
 
@@ -134,10 +176,10 @@
   display: flex;
   width: 290px;
   height: 290px;
-  background-image: image-set(url("../../img/games.webp") 1x type("image/webp"),
-      url("../../img/games@2x.webp") 2x type("image/webp"),
-      url("../../img/games.jpg") 1x type("image/jpeg"),
-      url("../../img/games@2x.jpg") 2x type("image/jpeg"));
+  background-image: image-set(url("../../img/games-desk.webp") 1x type("image/webp"),
+      url("../../img/games-desk@2x.webp") 2x type("image/webp"),
+      url("../../img/games-desk.jpg") 1x type("image/jpeg"),
+      url("../../img/games-desk@2x.jpg") 2x type("image/jpeg"));
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;

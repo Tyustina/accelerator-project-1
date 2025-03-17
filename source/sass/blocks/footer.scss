@@ -6,6 +6,16 @@
   background-color: v.$black;
   padding-top: 40px;
   padding-bottom: 40px;
+
+  @include m.tablet {
+    padding-top: 44px;
+    padding-bottom: 48px;
+  }
+
+  @include m.desktop {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 }
 
 .footer__wrapper {
@@ -17,6 +27,7 @@
 
   @include m.tablet {
     flex-direction: row;
+    align-items: center;
     gap: 35px;
   }
 
@@ -35,16 +46,18 @@
   @include m.list-reset;
   display: flex;
   flex-wrap: wrap;
-  column-gap: 35px;
+  column-gap: 36px;
   row-gap: 20px;
   font-size: 14px;
   line-height: 20px;
 
   @include m.tablet {
-    gap: 30px;
+    gap: 31px;
   }
 
   @include m.desktop {
-    column-gap: 82px;
+    column-gap: 83px;
+    margin-top: -3px;
+    margin-left: -3px;
   }
 }

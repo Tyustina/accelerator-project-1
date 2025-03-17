@@ -5,10 +5,14 @@
   display: flex;
   flex-direction: column;
   gap: 36px;
+  @include m.tablet {
 
-  @include m.desktop {
+  } @include m.tablet {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    row-gap: 35px;
+  }
+  @include m.desktop {
     column-gap: 30px;
     row-gap: 36px;
   }
@@ -19,7 +23,8 @@
   background-color: transparent;
   border: none;
   border-bottom: 1px solid v.$divider;
-  padding-bottom: 4px;
+  padding-bottom: 8px;
+
 }
 
 .form__input--name {
@@ -47,7 +52,16 @@
   padding-top: 22px;
   padding-bottom: 22px;
   background-color: transparent;
-  @include m.desktop {
+
+  @include m.tablet {
+    padding-top: 25px;
+    padding-bottom: 25px;
     grid-column: 1/-1;
+
+  }
+
+  @include m.desktop {
+    padding-top: 26px;
+    padding-bottom: 26px;
   }
 }

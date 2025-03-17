@@ -63,6 +63,7 @@
   font-size: 22px;
   line-height: 100%;
   margin-bottom: 9px;
+
   @include m.tablet {
     font-size: 24px;
     margin-bottom: 20px;
@@ -78,6 +79,7 @@
   font-size: 64px;
   line-height: 100%;
   margin-bottom: 28px;
+
   @include m.tablet {
     font-size: 70px;
   }
@@ -151,13 +153,18 @@
   }
 
   @include m.tablet {
+    display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column: 1/-1;
+    margin-top: 35px;
+    gap: 30px;
   }
 
   @include m.desktop {
+    grid-template-columns: auto;
+    gap: 30px;
+    margin-top: auto;
     margin-left: 40px;
-    grid-template-columns: 1fr;
     grid-column: 3/-1;
   }
 }
@@ -178,6 +185,7 @@
 
   @include m.tablet {
     text-align: left;
+  justify-items: left;
   }
 }
 
@@ -192,6 +200,7 @@
   @include m.tablet {
     font-size: 26px;
     margin-bottom: 10px;
+    text-align: left;
   }
 }
 

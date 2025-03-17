@@ -2,13 +2,11 @@
 @use "../common/mixin.scss" as m;
 
 .price {
-  @include m.container;
   padding-top: 40px;
   padding-bottom: 40px;
   background-color: v.$lightest-gray;
 
   @include m.tablet {
-    position: relative;
     padding-top: 60px;
     padding-bottom: 62px;
 
@@ -20,24 +18,16 @@
   }
 }
 
-.price::after {
-  @include m.tablet {
-    position: absolute;
-    content: "";
-    width: 365px;
-    height: 378px;
-    bottom: 9px;
-    right:-41px;
-    background-image: url("../../img/price-decor.png");
-    z-index: 0;
-  }
-}
-
 .price__title {
   text-align: center;
   margin-bottom: 30px;
+
   @include m.tablet {
     margin-bottom: 36px;
+  }
+
+  @include m.desktop {
+    margin-bottom: 21px;
   }
 }
 
@@ -56,13 +46,14 @@
 
   @include m.desktop {
     width: 350px;
+    margin-bottom: 40px;
   }
 }
 
 .price__tab {
   position: relative;
   font-size: 16px;
-  line-height: 16px;
+  line-height:100%;
   border: none;
   background-color: transparent;
   padding: 0;
@@ -72,7 +63,11 @@
   @include m.tablet {
     padding-bottom: 6px;
     font-size: 18px;
-    line-height: 18px;
+  }
+
+  @include m.desktop {
+    font-size: 20px;
+    padding-bottom: 7px;
   }
 }
 
@@ -131,8 +126,33 @@
 }
 
 .price__list {
+  position: relative;
   @include m.list-reset;
   display: none;
+  @include m.desktop {
+    @include m.container;
+  }
+}
+
+.price__list::after {
+  @include m.tablet {
+    position: absolute;
+    content: "";
+    width: 365px;
+    height: 378px;
+    bottom: -53px;
+    right:-41px;
+    background-image: url("../../img/price-decor.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 0;
+  }
+  @include m.desktop {
+    width: 300px;
+    height: 465px;
+    right: 0;
+    bottom: -123px;
+  }
 }
 
 .price__list--active {
@@ -145,6 +165,7 @@
 
   @include m.desktop {
     flex-direction: row;
+    gap: 41px;
   }
 }
 .price__item {
@@ -163,6 +184,7 @@
 
   @include m.desktop {
     margin: 0;
+    gap: 17px;
   }
 }
 
@@ -175,6 +197,10 @@
 
   @include m.tablet {
     font-size: 24px;
+  }
+
+  @include m.desktop {
+    font-size: 26px;
   }
 }
 
@@ -200,7 +226,7 @@
 .price__shadow {
   font-weight: 700;
   font-size: 80px;
-  line-height: 150%;
+  line-height: 120px;
   text-align: center;
   color: #e8e8e8;
   margin: 0;
@@ -233,6 +259,10 @@
     left: 42px;
     gap: 14px;
   }
+
+  @include m.desktop {
+    left: 33px;
+  }
 }
 
 .price__amound::after {
@@ -260,7 +290,8 @@
   }
 
   @include m.desktop {
-    padding: 27px 59px;
+    padding: 24px 59px;
+    margin-top: 1px;
   }
 }
 

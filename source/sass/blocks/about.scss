@@ -82,6 +82,7 @@
   @include m.container;
 
   @include m.desktop {
+    margin-left: -2px;
     padding: 0;
     width: auto;
   }

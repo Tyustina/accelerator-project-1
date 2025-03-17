@@ -9,31 +9,49 @@
   @include m.list-reset;
   display: grid;
   gap: 28px;
+  padding-top: 2px;
+
   @include m.tablet {
     position: relative;
-    grid-template-columns: max-content max-content;
+    grid-template-columns: 1fr 1fr;
     column-gap: 60px;
     justify-content: center;
     row-gap: 15px;
+    padding-top: 0;
   }
 
   @include m.desktop {
-justify-content: left;  }
+    justify-content: left;
+    column-gap: 130px;
+    row-gap: 16px;
+  }
 }
 
 .contacts__list::after {
-  position: absolute;
-  content: "";
-  width: 1px;
-  height: 100%;
-  background: v.$dark-blue;
-  top: 0;
-  left: 52%;
+  @include m.tablet {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 100%;
+    background: v.$dark-blue;
+    top: 0;
+    left: 52%;
+  }
+  @include m.tablet {
+    left: 50%;
+  }
 }
 
 .contacts__item {
   display: grid;
   gap: 12px;
+  @include m.tablet {
+    gap: 7px;
+  }
+
+  @include m.desktop {
+    gap: 6px;
+  }
 }
 
 .contacts__title {
@@ -41,6 +59,7 @@ justify-content: left;  }
   font-weight: 400;
   font-size: 20px;
   line-height: 100%;
+
   @include m.tablet {
     font-size: 24px;
   }
