@@ -9,7 +9,8 @@
   padding-bottom: 34px;
 
   @include m.tablet {
-    padding-top: 61px;
+    gap: 37px;
+    padding-top: 60px;
     padding-bottom: 120px;
   }
 
@@ -17,8 +18,9 @@
     @include m.container;
     display: grid;
     grid-template-columns: 355px 1fr;
+    padding-left: 105px;
     padding-top: 120px;
-    padding-bottom: 242px;
+    padding-bottom: 240px;
   }
 }
 
@@ -31,7 +33,7 @@
   }
 
   @include m.desktop {
-    margin-bottom: 95px;
+    margin-bottom: 94px;
     text-align: left;
   }
 }
@@ -44,7 +46,7 @@
   }
 
   @include m.desktop {
-    margin-bottom: 25px;
+    margin-bottom: 26px;
     text-align: left;
 
   }
@@ -82,22 +84,21 @@
   @include m.container;
 
   @include m.desktop {
-    margin-left: -2px;
+    margin: 0;
     padding: 0;
     width: auto;
   }
 }
 
 .about__media-wrapper {
-
   display: flex;
   flex-direction: column;
   gap: 36px;
-  margin: 0 auto;
 
   @include m.tablet {
     position: relative;
     gap: 0;
+    margin: 0 auto;
   }
 
   @include m.desktop {
@@ -107,8 +108,8 @@
 }
 
 .about__img {
-  width: 320px;
-  height: 280px;
+  width: 100%;
+  height: auto;
   background-size: cover;
 
   @include m.tablet {

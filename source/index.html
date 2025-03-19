@@ -77,6 +77,10 @@
           <iframe class="video__link" width="320" height="170" src="" frameborder="0" allowfullscreen
             loading="lazy"></iframe>
           <picture>
+            <source type="image/webp" srcset="./img/video-placeholder-tab.webp 1x, ./img/video-placeholder-tab.webp 2x"
+              width="270" height="170">
+            <source type="image/jpeg" srcset="./img/video-placeholder-tab.jpg 1x, ./img/video-placeholder-tab.jpg 2x"
+              width="270" height="170">
             <source type="image/webp" srcset="./img/video-placeholder.webp 1x, ./img/video-placeholder@2x.webp 2x"
               width="320" height="170">
             <img class="video__placeholder" src="./img/video-placeholder.jpg" srcset="./img/video-placeholder@2x.jpg"
@@ -86,100 +90,101 @@
       </div>
     </section>
     <section class="price" id="price" data-test="price">
-      <h2 class="price__title title">Абонементы</h2>
-
-      <ul class="price__tabs ">
-        <li><button class="price__tab price__tab--active" data-target-id="1">1 месяц</button></li>
-        <li><button class="price__tab" data-target-id="2">6 месяцев</button></li>
-        <li><button class="price__tab" data-target-id="3">12 месяцев</button></li>
-      </ul>
-      <ul class="price__list price__list--active" data-id="1">
-        <li class="price__item" id="tab1">
-          <h3 class="price__heading">С тренером</h3>
-          <span class="price__desk">12 занятий</span>
-          <div class="price__wrapper">
-            <p class="price__shadow" aria-hidden="true">5000</p>
-            <p class="price__amound">5000</p>
-          </div>
-          <a class="price__button button button--dark" href="./404.html">Купить абонемент</a>
-        </li>
-        <li class="price__item" id="tab2">
-          <h3 class="price__heading">Дневной</h3>
-          <span class="price__desk">с 8:00 до 12:00</span>
-          <div class="price__wrapper">
-            <p class="price__shadow" aria-hidden="true">1700</p>
-            <p class="price__amound">1700</p>
-          </div>
-          <a class="price__button button button--dark" href="./404.html">Купить абонемент</a>
-        </li>
-        <li class="price__item" id="tab3">
-          <h3 class="price__heading">Полный день</h3>
-          <span class="price__desk">с 8:00 до 22:00</span>
-          <div class="price__wrapper">
-            <p class="price__shadow" aria-hidden="true">2700</p>
-            <p class="price__amound">2700 </p>
-          </div>
-          <a class="price__button button button--dark" href="./404.html">Купить абонемент</a>
-        </li>
-      </ul>
-      <ul class="price__list" data-id="2">
-        <li class="price__item" id="tab1">
-          <h3 class="price__heading">С тренером</h3>
-          <span class="price__desk">12 занятий</span>
-          <div class="price__wrapper">
-            <p class="price__shadow" aria-hidden="true">30000</p>
-            <p class="price__amound">30000</p>
-          </div>
-          <a class="price__button button button--dark" href="./404.html">Купить абонемент</a>
-        </li>
-        <li class="price__item" id="tab2">
-          <h3 class="price__heading">Дневной</h3>
-          <span class="price__desk">с 8:00 до 12:00</span>
-          <div class="price__wrapper">
-            <p class="price__shadow" aria-hidden="true">10200</p>
-            <p class="price__amound">10200</p>
-          </div>
-          <a class="price__button button button--dark" href="./404.html">Купить абонемент</a>
-        </li>
-        <li class="price__item" id="tab3">
-          <h3 class="price__heading">Полный день</h3>
-          <span class="price__desk">с 8:00 до 22:00</span>
-          <div class="price__wrapper">
-            <p class="price__shadow" aria-hidden="true">16200</p>
-            <p class="price__amound">16200 </p>
-          </div>
-          <a class="price__button button button--dark" href="./404.html">Купить абонемент</a>
-        </li>
-      </ul>
-      <ul class="price__list" data-id="3">
-        <li class="price__item" id="tab1">
-          <h3 class="price__heading">С тренером</h3>
-          <span class="price__desk">12 занятий</span>
-          <div class="price__wrapper">
-            <p class="price__shadow" aria-hidden="true">60000</p>
-            <p class="price__amound">60000</p>
-          </div>
-          <a class="price__button button button--dark" href="./404.html">Купить абонемент</a>
-        </li>
-        <li class="price__item" id="tab2">
-          <h3 class="price__heading">Дневной</h3>
-          <span class="price__desk">с 8:00 до 12:00</span>
-          <div class="price__wrapper">
-            <p class="price__shadow" aria-hidden="true">20400</p>
-            <p class="price__amound">20400</p>
-          </div>
-          <a class="price__button button button--dark" href="./404.html">Купить абонемент</a>
-        </li>
-        <li class="price__item" id="tab3">
-          <h3 class="price__heading">Полный день</h3>
-          <span class="price__desk">с 8:00 до 22:00</span>
-          <div class="price__wrapper">
-            <p class="price__shadow" aria-hidden="true">32400</p>
-            <p class="price__amound">32400 </p>
-          </div>
-          <a class="price__button button button--dark" href="./404.html">Купить абонемент</a>
-        </li>
-      </ul>
+      <div class="price__container">
+        <h2 class="price__title title">Абонементы</h2>
+        <ul class="price__tabs ">
+          <li><button class="price__tab price__tab--active" data-target-id="1">1 месяц</button></li>
+          <li><button class="price__tab" data-target-id="2">6 месяцев</button></li>
+          <li><button class="price__tab" data-target-id="3">12 месяцев</button></li>
+        </ul>
+        <ul class="price__list price__list--active" data-id="1">
+          <li class="price__item" id="tab1">
+            <h3 class="price__heading">С тренером</h3>
+            <span class="price__desk">12 занятий</span>
+            <div class="price__wrapper">
+              <p class="price__shadow" aria-hidden="true">5000</p>
+              <p class="price__amound">5000</p>
+            </div>
+            <a class="price__button button button--dark" href="./404.html">Купить абонемент</a>
+          </li>
+          <li class="price__item" id="tab2">
+            <h3 class="price__heading">Дневной</h3>
+            <span class="price__desk">с 8:00 до 12:00</span>
+            <div class="price__wrapper">
+              <p class="price__shadow" aria-hidden="true">1700</p>
+              <p class="price__amound">1700</p>
+            </div>
+            <a class="price__button button button--dark" href="./404.html">Купить абонемент</a>
+          </li>
+          <li class="price__item" id="tab3">
+            <h3 class="price__heading">Полный день</h3>
+            <span class="price__desk">с 8:00 до 22:00</span>
+            <div class="price__wrapper">
+              <p class="price__shadow" aria-hidden="true">2700</p>
+              <p class="price__amound">2700 </p>
+            </div>
+            <a class="price__button button button--dark" href="./404.html">Купить абонемент</a>
+          </li>
+        </ul>
+        <ul class="price__list" data-id="2">
+          <li class="price__item" id="tab1">
+            <h3 class="price__heading">С тренером</h3>
+            <span class="price__desk">12 занятий</span>
+            <div class="price__wrapper">
+              <p class="price__shadow" aria-hidden="true">30000</p>
+              <p class="price__amound">30000</p>
+            </div>
+            <a class="price__button button button--dark" href="./404.html">Купить абонемент</a>
+          </li>
+          <li class="price__item" id="tab2">
+            <h3 class="price__heading">Дневной</h3>
+            <span class="price__desk">с 8:00 до 12:00</span>
+            <div class="price__wrapper">
+              <p class="price__shadow" aria-hidden="true">10200</p>
+              <p class="price__amound">10200</p>
+            </div>
+            <a class="price__button button button--dark" href="./404.html">Купить абонемент</a>
+          </li>
+          <li class="price__item" id="tab3">
+            <h3 class="price__heading">Полный день</h3>
+            <span class="price__desk">с 8:00 до 22:00</span>
+            <div class="price__wrapper">
+              <p class="price__shadow" aria-hidden="true">16200</p>
+              <p class="price__amound">16200 </p>
+            </div>
+            <a class="price__button button button--dark" href="./404.html">Купить абонемент</a>
+          </li>
+        </ul>
+        <ul class="price__list" data-id="3">
+          <li class="price__item" id="tab1">
+            <h3 class="price__heading">С тренером</h3>
+            <span class="price__desk">12 занятий</span>
+            <div class="price__wrapper">
+              <p class="price__shadow" aria-hidden="true">60000</p>
+              <p class="price__amound">60000</p>
+            </div>
+            <a class="price__button button button--dark" href="./404.html">Купить абонемент</a>
+          </li>
+          <li class="price__item" id="tab2">
+            <h3 class="price__heading">Дневной</h3>
+            <span class="price__desk">с 8:00 до 12:00</span>
+            <div class="price__wrapper">
+              <p class="price__shadow" aria-hidden="true">20400</p>
+              <p class="price__amound">20400</p>
+            </div>
+            <a class="price__button button button--dark" href="./404.html">Купить абонемент</a>
+          </li>
+          <li class="price__item" id="tab3">
+            <h3 class="price__heading">Полный день</h3>
+            <span class="price__desk">с 8:00 до 22:00</span>
+            <div class="price__wrapper">
+              <p class="price__shadow" aria-hidden="true">32400</p>
+              <p class="price__amound">32400 </p>
+            </div>
+            <a class="price__button button button--dark" href="./404.html">Купить абонемент</a>
+          </li>
+        </ul>
+      </div>
     </section>
     <section class="games" data-test="games">
       <div class="games__wrapper">
@@ -196,7 +201,7 @@
           </div>
         </div>
         <p class="games__desk">Ежегодные соревнования по CrossFit</p>
-        <a class="games__button button button--light" href="#">Заполнить заявку</a>
+        <a class="games__button button button--light" href="./404.html">Заполнить заявку</a>
       </div>
       <div class="games__img"></div>
     </section>
@@ -423,47 +428,47 @@
           <li><button class="faq__tab" data-target-id="4">Правила</button></li>
         </ul>
         <div class="faq__list faq__list--active" data-id="1">
-          <details class="faq__item"  class="faq__item" open>
+          <details class="faq__item" class="faq__item" open>
             <summary>Как стать членом фитнес-центра?</summary>
             <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке
               абонемента онлайн, анкета также заполняется онлайн и договор придёт вам на почту.</p>
           </details>
-          <details class="faq__item" >
+          <details class="faq__item">
             <summary>Где можно посмотреть расписание?</summary>
             <p>Вы можете ознакомиться с расписание на стойке информации, на нашем официальном сайте. Так же есть
               возможность оформить подписку на наши новости и получать расписание и обновления на почту каждую неделю.
             </p>
           </details>
-          <details class="faq__item" >
+          <details class="faq__item">
             <summary>Есть кулеры в центре? Предоставляются полотенца?</summary>
             <p>В зале установлены несколько кулеров с водой и одноразовыми стаканчикаами. Полотенца вы можете взять на
               ресепшене у администратора.</p>
           </details>
-          <details class="faq__item" >
+          <details class="faq__item">
             <summary>Сколько тренеров работает в клубе и какова их квалификация?</summary>
             <p>С актуальной информацией о тренерском составе и их квалификации можно ознакомиться в разделле "Жюри".
             </p>
           </details>
         </div>
         <div class="faq__list" data-id="2">
-          <details class="faq__item"  open>
+          <details class="faq__item" open>
             <summary>Занятия с тренером входят в абонемент?</summary>
             <p>При посещении тренажерного зала вам необходимо оплатить занятия с тренером отдельно. В зале всегда
               присутствует дежурный тренер, которому можно задать вопрос, получить небольшую консультацию по тренажеру
               или технике выполнения упражнения.</p>
           </details>
-          <details class="faq__item"   >
+          <details class="faq__item">
             <summary>Можно ли заморозить абонемент?</summary>
             <p>Заморозка возможна на абонементах сроком более 6 месяцев. Срок заморозки 2 недели, в случае болезни -
               заморозка возможна по справке от врача.
             </p>
           </details>
-          <details class="faq__item"   >
+          <details class="faq__item">
             <summary>Есть ли лимит по посещениям тренажерного зала и групповых занятий?</summary>
-              <p>Лимиты по помещению предусмотрены только на абонементах с тренером, в остальных случаях лимит на
-                посещения не ограничен.</p>
+            <p>Лимиты по помещению предусмотрены только на абонементах с тренером, в остальных случаях лимит на
+              посещения не ограничен.</p>
           </details>
-          <details class="faq__item"   >
+          <details class="faq__item">
             <summary>Что такое семейный доступ и доступ для друзей?</summary>
             <p>Такой доступ позволяет использовать абонемент несколькими людьми (друзьями или семьей), указаными при
               покупке абонемента, но не всеми в один день.
@@ -471,54 +476,54 @@
           </details>
         </div>
         <div class="faq__list" data-id="3">
-          <details class="faq__item"  open>
-              <summary>Предлагает ли клуб услуги
-                по консультированию
-                по вопросам питания?</summary>
-              <p>Да. Вы можете обратиться как к своему тренеру, так и к нашему нутрициологу. Специалист уточнит ваши
-                данные, цели и предложит программу питания.</p>
+          <details class="faq__item" open>
+            <summary>Предлагает ли клуб услуги
+              по консультированию
+              по вопросам питания?</summary>
+            <p>Да. Вы можете обратиться как к своему тренеру, так и к нашему нутрициологу. Специалист уточнит ваши
+              данные, цели и предложит программу питания.</p>
           </details>
-          <details class="faq__item"   >
-              <summary>Проводятся ли в клубе какие-либо мероприятия или соревнования?</summary>
-              <p>Да, конечно. В клубе регулярно проводятся различные мероприятия. Актуальная информация всегда есть на
-                нашем сайте и у администраторов.
-              </p>
+          <details class="faq__item">
+            <summary>Проводятся ли в клубе какие-либо мероприятия или соревнования?</summary>
+            <p>Да, конечно. В клубе регулярно проводятся различные мероприятия. Актуальная информация всегда есть на
+              нашем сайте и у администраторов.
+            </p>
           </details>
-          <details class="faq__item"   >
-              <summary>Можно ли приобрести в центре спортивное питание?</summary>
-              <p>Спортивное питание можно приобрести в фитнес-баре.</p>
+          <details class="faq__item">
+            <summary>Можно ли приобрести в центре спортивное питание?</summary>
+            <p>Спортивное питание можно приобрести в фитнес-баре.</p>
           </details>
-          <details class="faq__item"   >
-              <summary>Есть ли в центре детская комната?</summary>
-              <p>В нашем клубе нет детской комнаты, но мы учтем пожелания и проведем опрос среди клиентов о
-                необходимости.
-              </p>
+          <details class="faq__item">
+            <summary>Есть ли в центре детская комната?</summary>
+            <p>В нашем клубе нет детской комнаты, но мы учтем пожелания и проведем опрос среди клиентов о
+              необходимости.
+            </p>
           </details>
         </div>
         <div class="faq__list" data-id="4">
-          <details class="faq__item"  open>
-              <summary>Есть в фитнес-центре дресс-код?</summary>
-              <p>Для тренировок необходимо иметь предназначенную для этого закрытую спортивную обувь и одежду. Верхняя и
-                нижняя части тела должны быть закрыты (используйте футболки, майки, спортивные брюки, шорты, кроссовки).
-                В целях безопасности, запрещается тренироваться босиком, в пляжных или домашних тапочках и т. п.,
-                исключения составляют специальные классы (например, йога, пилатес). </p>
+          <details class="faq__item" open>
+            <summary>Есть в фитнес-центре дресс-код?</summary>
+            <p>Для тренировок необходимо иметь предназначенную для этого закрытую спортивную обувь и одежду. Верхняя и
+              нижняя части тела должны быть закрыты (используйте футболки, майки, спортивные брюки, шорты, кроссовки).
+              В целях безопасности, запрещается тренироваться босиком, в пляжных или домашних тапочках и т. п.,
+              исключения составляют специальные классы (например, йога, пилатес). </p>
           </details>
-          <details class="faq__item"   >
-              <summary>Можно ли приводить с собой детей на тренировки?</summary>
-              <p>Посещение с детьми не предусмотрено.
-              </p>
+          <details class="faq__item">
+            <summary>Можно ли приводить с собой детей на тренировки?</summary>
+            <p>Посещение с детьми не предусмотрено.
+            </p>
           </details>
-          <details class="faq__item"  >
-              <summary>Какие дополнительные правила посещения центра?</summary>
-              <p>В клубе запрещено курение и распитие спиртных напитков.</p>
+          <details class="faq__item">
+            <summary>Какие дополнительные правила посещения центра?</summary>
+            <p>В клубе запрещено курение и распитие спиртных напитков.</p>
           </details>
-          <details class="faq__item"   >
-              <summary>Нужна ли медицинская справка для посещения залов и бассейна?</summary>
-              <p>Для посещения бассейна необходима справка от терапевта. Для посещения зала справка не требуется.
-              </p>
+          <details class="faq__item">
+            <summary>Нужна ли медицинская справка для посещения залов и бассейна?</summary>
+            <p>Для посещения бассейна необходима справка от терапевта. Для посещения зала справка не требуется.
+            </p>
           </details>
           </details>
-      </div>
+        </div>
     </section>
     <section class="reviews" data-test="reviews">
       <h2 class="reviews__title title">Отзывы</h2>
@@ -592,11 +597,11 @@
       </svg>
       <nav class="footer__nav">
         <ul class="footer__list">
-          <li class="footer__item">Услуги</li>
-          <li class="footer__item">Абонементы</li>
-          <li class="footer__item">Акции</li>
-          <li class="footer__item">Тренеры</li>
-          <li class="footer__item">Расписание</li>
+          <li class="footer__item"><a class="footer__link" href="#">Услуги</a></li>
+          <li class="footer__item"><a class="footer__link" href="#">Абонементы</a></li>
+          <li class="footer__item"><a class="footer__link" href="#">Акции</a></li>
+          <li class="footer__item"><a class="footer__link" href="#">Тренеры</a></li>
+          <li class="footer__item"><a  class="footer__link" href="#">Расписание</a></li>
         </ul>
       </nav>
       <div class="socials">

@@ -2,13 +2,15 @@
 @use "../common/mixin.scss" as m;
 
 .price {
+
+  background-color: v.$lightest-gray;
   padding-top: 40px;
   padding-bottom: 40px;
-  background-color: v.$lightest-gray;
+  z-index: 1;
 
   @include m.tablet {
-    padding-top: 60px;
-    padding-bottom: 62px;
+    padding-top: 61px;
+    padding-bottom: 59px;
 
   }
 
@@ -16,6 +18,13 @@
     padding-top: 100px;
     padding-bottom: 100px;
   }
+
+}
+
+
+.price__container {
+  @include m.container;
+
 }
 
 .price__title {
@@ -31,8 +40,10 @@
   }
 }
 
+
 .price__tabs {
   @include m.list-reset;
+  width: 290px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -41,7 +52,7 @@
 
   @include m.tablet {
     width: 310px;
-    margin-bottom: 46px;
+    margin-bottom: 45px;
   }
 
   @include m.desktop {
@@ -53,11 +64,11 @@
 .price__tab {
   position: relative;
   font-size: 16px;
-  line-height:100%;
+  line-height: 100%;
   border: none;
   background-color: transparent;
   padding: 0;
-  padding-bottom: 6px;
+  padding-bottom: 7px;
   opacity: 0.5;
 
   @include m.tablet {
@@ -72,7 +83,7 @@
 }
 
 
-.price__tab--active{
+.price__tab--active {
   opacity: 1;
 }
 
@@ -82,7 +93,8 @@
   position: absolute;
   width: 100%;
   height: 2px;
-  background-color: v.$red;;
+  background-color: v.$red;
+  ;
   bottom: -2px;
   left: 0;
 }
@@ -129,78 +141,95 @@
   position: relative;
   @include m.list-reset;
   display: none;
-  @include m.desktop {
-    @include m.container;
-  }
+
 }
 
-.price__list::after {
+.price__list--active::after {
   @include m.tablet {
     position: absolute;
     content: "";
-    width: 365px;
-    height: 378px;
-    bottom: -53px;
-    right:-41px;
-    background-image: url("../../img/price-decor.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: 0;
-  }
-  @include m.desktop {
-    width: 300px;
-    height: 465px;
+    width: 275px;
+    height: 328px;
+    bottom: 0;
     right: 0;
-    bottom: -123px;
+    background-image: url("../../img/price-decor.png");
+    background-position: -4px 0;
+    background-repeat: no-repeat;
+    z-index: -1;
+
+  }
+
+  @include m.desktop {
+    width: 321px;
+    height: 384px;
+    bottom: -75px;
+    right: -239px;
+    background-position: -118px -37px;
+    background-image: url("../../img/price-decor-big.png");
   }
 }
 
 .price__list--active {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 35px;
+
   @include m.tablet {
     gap: 40px;
   }
 
   @include m.desktop {
     flex-direction: row;
-    gap: 41px;
+    gap: 40px;
   }
 }
+
 .price__item {
   display: flex;
   flex-direction: column;
   gap: 18px;
-  padding: 50px 42px;
+  padding: 43px 34px;
   background-color: v.$white;
   margin: 0 auto;
+  border: 7px solid transparent;
+  box-sizing: border-box;
+  z-index: 3;
 
   @include m.tablet {
-    padding: 65px;
+    padding: 58px;
     gap: 21px;
-    z-index: 3;
   }
 
   @include m.desktop {
-    margin: 0;
-    gap: 17px;
+    margin: 0 auto;
+    gap: 16px;
   }
 }
+
+.price__item:hover,
+.price__item:focus {
+  border-image-source: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
+  border-image-slice: 1;
+}
+
 
 .price__heading {
   font-weight: 700;
   font-size: 22px;
-  line-height: 100%;
+  line-height: 23px;
   text-align: center;
   margin: 0;
 
   @include m.tablet {
     font-size: 24px;
+    line-height: 24px;
   }
 
   @include m.desktop {
     font-size: 26px;
+    line-height: 26px;
+    margin-top: 1px;
   }
 }
 
@@ -234,7 +263,7 @@
 
   @include m.tablet {
     font-size: 100px;
-    line-height: 150px;
+    line-height: 154px;
   }
 }
 
@@ -249,19 +278,20 @@
   text-align: center;
   color: v.$light-blue;
   margin: 0;
-  bottom: 0;
-  left: 18%;
+  bottom: 1px;
+  left: 38px;
 
   @include m.tablet {
     font-size: 60px;
     line-height: 90px;
-    bottom: -2px;
-    left: 42px;
+    bottom: 1px;
+    left: 43px;
     gap: 14px;
   }
 
   @include m.desktop {
-    left: 33px;
+    left: 32px;
+    bottom: 2px;
   }
 }
 
@@ -270,28 +300,30 @@
   display: block;
   width: 24px;
   height: 34px;
-  background-image: url("../../img/rub-icon.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
+  background-color: v.$primary;
+  mask-image: url("/__spritemap#sprite-rub-icon-view");
+  mask-repeat: no-repeat;
+  mask-size: cover;
   color: v.$primary;
+
   @include m.tablet {
     width: 31px;
-    height: 43px;
+    height: 44px;
   }
 }
 
 .price__button {
   display: flex;
-  padding: 25px 47px;
+  padding: 25px 48px;
+  margin-top: -1px;
 
   @include m.tablet {
-    padding: 25px 69px;
-    margin-top: 2px;
+    padding: 25px 70px;
   }
 
   @include m.desktop {
-    padding: 24px 59px;
-    margin-top: 1px;
+    padding: 25px 59px;
+    margin-top: -2px;
   }
 }
 

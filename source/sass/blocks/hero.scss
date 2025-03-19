@@ -98,6 +98,7 @@
   @include m.tablet {
     line-height: 22px;
     padding-bottom: 26px;
+    margin-top: auto;
   }
 
   @include m.desktop {

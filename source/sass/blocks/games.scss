@@ -25,7 +25,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 56px;
-  row-gap: 16px;
+  row-gap: 15px;
   background-color: v.$red;
   padding: 40px;
 
@@ -62,7 +62,7 @@
   grid-column: 2/-1;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 5px;
 
   @include m.tablet {
     gap: 20px;
@@ -166,9 +166,11 @@
   color: v.$white;
   padding: 22px 50px;
   border-color: v.$white;
+  margin-top: 2px;
 
   @include m.tablet {
     padding: 25px 55px;
+    margin-top: 0;
   }
 }
 

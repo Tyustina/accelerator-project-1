@@ -1,5 +1,5 @@
 const faqSection = document.querySelector('.faq');
-const faqLists = faqSection.querySelectorAll('.faq__list');
+// const faqLists = faqSection.querySelectorAll('.faq__list');
 
 // faqLists.forEach(faqList => {
 //   const faqItems = faqList.querySelectorAll('.faq__item');
@@ -32,7 +32,30 @@ const faqLists = faqSection.querySelectorAll('.faq__list');
 //     });
 //   });
 // });
+// const accordions = faqSection.querySelectorAll('.faq__list details');
 
+// accordions.forEach((accordion) => {
+//   const content = accordion.querySelector('.faq__list p');
+
+//   if(accordion.open){
+//     content.style.maxHeight = content.scrollHeight + 'px';
+//   }
+//   accordion.addEventListener('toggle', () => {
+//     if (accordion.open) {
+//       // Даем браузеру время перерисовать
+//       requestAnimationFrame(() => {
+//         content.style.maxHeight = null;
+//         content.style.maxHeight = content.scrollHeight + 'px';
+//       });
+//     } else {
+//       content.style.maxHeight = content.scrollHeight + 'px';
+//       requestAnimationFrame(() => {
+//         content.style.maxHeight = null;
+//         content.style.maxHeight = 0;
+//       });
+//     }
+//   });
+// });
 const showFaq = (btn) => {
 
   const targetId = btn.dataset.targetId;

@@ -2,24 +2,34 @@
 @use "../common/mixin.scss" as m;
 
 .video {
- position: relative;
+  position: relative;
   align-content: center;
+  width: 100%;
   margin: 0 auto;
+  padding-bottom: 53.125%;
+  /* 170px / 320px = 0.53125 Сохраняем пропорции 16:9 (или другие ваши пропорции) */
+  height: 0;
+  overflow: hidden;
 
   @include m.tablet {
     position: absolute;
-    bottom: -85px;
-    left: 30%;
+    bottom: -275px;
+    left: 204px;
   }
 
   @include m.desktop {
-    left: 9px;
-    bottom: -115px;
+    left: 7px;
+    bottom: -293px;
   }
 }
 
 .video__link {
-  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
 
   @include m.tablet {
     width: 270px;
@@ -35,7 +45,12 @@
 .video__placeholder {
   position: absolute;
   top: 0;
+  left: 0;
   z-index: 2;
+  width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 
   @include m.tablet {
     width: 270px;
@@ -51,16 +66,18 @@
 .video__button {
   position: absolute;
   content: "";
-  z-index: 10;
+  z-index: 50;
   display: flex;
   width: 52px;
   height: 52px;
   border-radius: 100%;
   background: linear-gradient(90deg, v.$red 0%, v.$blue 100%);
-  top: 34%;
-  left: 42%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
   @include m.tablet {
+    transform: none;
     top: 59px;
     left: 109px;
   }
@@ -69,7 +86,7 @@
     width: 72px;
     height: 72px;
     top: 79px;
-    left: 144px;
+    left: 145px;
   }
 }
 
@@ -84,8 +101,10 @@
   border-left: 10px solid v.$white;
 
   @include m.desktop {
-    right: 22px;
-    top: 30px;
+    right: 21px;
+    top: 29px;
+    border: 7px solid transparent;
+    border-left: 11px solid #ffffff;
   }
 }
 
@@ -106,6 +125,8 @@
   @include m.desktop {
     width: 100px;
     height: 100px;
+    top: -14px;
+    left: -14px;
   }
 }
 
