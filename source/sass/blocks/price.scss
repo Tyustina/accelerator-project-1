@@ -209,7 +209,7 @@
 
 .price__item:hover,
 .price__item:focus {
-  border-image-source: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
+  border-image-source: linear-gradient(151deg, v.$red 0%, v.$blue 100%);
   border-image-slice: 1;
 }
 

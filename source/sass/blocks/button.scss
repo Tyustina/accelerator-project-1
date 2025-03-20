@@ -12,7 +12,8 @@
   text-transform: uppercase;
   border: 2px solid transparent;
   text-decoration: none;
-  box-sizing: border-box;
+  transition: background-image 3s ease, color 0.3s ease;
+  cursor: pointer;
 
   @include m.tablet {
     padding-top: 27px;
@@ -34,11 +35,13 @@
   background-color: v.$white;
   color: v.$light-blue;
 }
+
 .button--light:focus {
   background-color: v.$white80;
   color: v.$light-blue;
   border-color: #000000;
 }
+
 .button--light:active {
   background-color: v.$white;
   color: v.$primary;
@@ -50,24 +53,25 @@
 }
 
 .button--dark:hover {
-  background: linear-gradient(90deg,v.$red 0%, v.$blue 100%);
-  border-color: transparent;
-  border-left: v.$red;
-  border-right:  v.$blue;
+  border: 2px solid transparent;
+  border-left: 2px solid v.$red;
+  border-right: 2px solid v.$blue;
+  background-image: linear-gradient(90deg, v.$red 0%, v.$blue 100%);
   color: v.$white;
 }
 
 .button--dark:focus {
   color: v.$white;
   border-color: #000000;
-  background: linear-gradient(90deg, v.$red80 0%, v.$blue80 100%);}
+  background: linear-gradient(90deg, v.$red80 0%, v.$blue80 100%);
+}
 
 .button--dark:active {
   color: v.$white70;
   border-color: inherit;
-  background: linear-gradient(90deg,v.$red 0%, v.$blue 100%);
+  background: linear-gradient(90deg, v.$red 0%, v.$blue 100%);
   border-left: v.$red;
-  border-right:  v.$blue;
+  border-right: v.$blue;
 }
 
 .button--dark:disabled {

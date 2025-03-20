@@ -14,6 +14,7 @@ $divider: #74819c;
 $white80: rgba(255, 255, 255, 0.8);
 $white70: rgba(255, 255, 255, 0.7);
 $white50: rgba(255, 255, 255, 0.5);
+$white40: rgba(255, 255, 255, 0.4);
 $white30: rgba(255, 255, 255, 0.3);
 $red80: rgba(237, 2, 51, 0.8);
 $blue80: rgba(0, 62, 183, 0.8);
@@ -21,7 +22,7 @@ $primary70: rgba(16, 38, 84, 0.7);
 $primary60: rgba(16, 38, 84, 0.6);
 $primary30: rgba(16, 38, 84, 0.3);
 $primary20: rgba(16, 38, 84, 0.2);
-
+$gradient: linear-gradient(90deg, $red 0%, $blue 100%);
 
 $only-mobile-width: 767px;
 $tablet-width: 768px;

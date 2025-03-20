@@ -396,25 +396,21 @@
         <div class="offers__text-wrapper">
           <p>Год</p>
           <p>4999</p>
-          <p>Безлимитный абонемент<br>в тренажёрный зал</p>
+          <p>Безлимитный абонемент в тренажёрный зал</p>
         </div>
         <a class="offers__link" href="./404.html">Подробнее</a>
       </div>
       <div class="offers__img"></div>
       <div class="offers__cards">
         <div class="offers__card">
-          <div class="offers__card-wrapper">
-            <h3>Месяц бесплатно</h3>
-            <p>Приведи друга, получи абонемент в подарок</p>
-            <a class="offers__link offers__link--dark" href="./404.html">Подробнее</a>
-          </div>
+          <h3>Месяц бесплатно</h3>
+          <p>Приведи друга, получи абонемент в&nbsp;подарок</p>
+          <a class="offers__link offers__link--dark" href="./404.html">Подробнее</a>
         </div>
         <div class="offers__card">
-          <div class="offers__card-wrapper">
-            <h3>Скидка 20%</h3>
-            <p>Корпоративный фитнес с командой</p>
-            <a class="offers__link offers__link--dark" href="./404.html">Подробнее</a>
-          </div>
+          <h3>Скидка 20%</h3>
+          <p>Корпоративный фитнес с командой</p>
+          <a class="offers__link offers__link--dark" href="./404.html">Подробнее</a>
         </div>
       </div>
     </section>
@@ -559,10 +555,12 @@
         <div class="info__wrapper">
           <h2 class="info__title title ">Бесплатное занятие</h2>
           <form class="form" action="https://echo.htmlacademy.ru/." method="post">
-            <label class="form__text"><input class="form__input form__input--name" type="text"
-                placeholder="Имя"></label>
-            <label class="form__text"><input class="form__input form__input--tel" type="number"
-                placeholder="Телефон"></label>
+            <label class="form__text"><input class="form__input" type="text"
+                placeholder="Имя" pattern="^[a-zA-Zа-яА-Я\s]+$" title="Поле должно содержать только буквы и пробелы" required>
+              <span class="form__error"></span></label>
+            <label class="form__text"><input class="form__input" type="tel"
+                placeholder="Телефон" pattern="^[0-9]$" title="Поле должно содержать только цифры" required>
+                <span class="form__error"></span></label>
             <input class="form__button button button--light" type="submit" value="Отправить">
           </form>
         </div>
@@ -572,17 +570,17 @@
         <ul class="contacts__list">
           <li class="contacts__item">
             <h3 class="contacts__title">Адрес:</h3>
-            <p class="contacts__text">г. Омск, ул. 60 лет Октября, 7</p>
+            <p class="contacts__text">г. Омск, ул. 60 лет Октября, 7</p>
           </li>
-          <li class="contacts__item">
+          <li class="contacts__item contacts__item--schedule">
             <h3 class="contacts__title">График работы:</h3>
-            <p class="contacts__text">Пн-Вс: с 8:00 до 22:00</p>
+            <p class="contacts__text">Пн-Вс: с 8:00 до 22:00</p>
           </li>
-          <li class="contacts__item">
+          <li class="contacts__item contacts__item--tel">
             <h3 class="contacts__title">Телефон:</h3>
-            <a class="contacts__text" href="tel:78005555555">8 800 555-55-55</a>
+            <a class="contacts__text" href="tel:78005555555">8 800 555-55-55</a>
           </li>
-          <li class="contacts__item">
+          <li class="contacts__item contacts__item--email">
             <h3 class="contacts__title">Email:</h3>
             <a class="contacts__text" href="mailto:oмск@supergym.ru">oмск@supergym.ru</a>
           </li>
@@ -601,7 +599,7 @@
           <li class="footer__item"><a class="footer__link" href="#">Абонементы</a></li>
           <li class="footer__item"><a class="footer__link" href="#">Акции</a></li>
           <li class="footer__item"><a class="footer__link" href="#">Тренеры</a></li>
-          <li class="footer__item"><a  class="footer__link" href="#">Расписание</a></li>
+          <li class="footer__item"><a class="footer__link" href="#">Расписание</a></li>
         </ul>
       </nav>
       <div class="socials">
