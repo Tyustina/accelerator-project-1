@@ -4,8 +4,10 @@
 .button {
   display: flex;
   justify-content: center;
+  width: auto;
   padding-top: 25px;
   padding-bottom: 25px;
+  box-sizing: border-box;
   font-weight: 700;
   font-size: 12px;
   line-height: 12px;
@@ -53,7 +55,8 @@
 }
 
 .button--dark:hover {
-  border-color: transparent;
+  border-image-source: linear-gradient(90deg, v.$red 0%, v.$blue 100%);
+  border-image-slice: 1;
   background-image: linear-gradient(90deg, v.$red 0%, v.$blue 100%);
   color: v.$white;
 }

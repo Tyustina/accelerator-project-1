@@ -2,75 +2,140 @@
 @use "../common/mixin.scss" as m;
 
 .juri {
+  @include m.container;
   position: relative;
-  padding-top: 100px;
-  padding-bottom: 100px;
-  overflow: hidden;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @include m.tablet {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  @include m.desktop {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
 }
 
 .juri__title {
-  margin-bottom: 46px;
+  margin-bottom: 20px;
+
+  @include m.tablet {
+    font-size: 54px;
+    margin-bottom: 46px;
+  }
 }
 
 .juri__list {
   @include m.list-reset;
   display: flex;
-  gap: 40px;
-  transition: transform 0.3s ease-in-out;
+  width: 90%;
+  margin: 0 auto;
+  align-items: center;
+  overflow: hidden;
+
+  @include m.tablet {
+    width: 83%;
+  }
 }
 
 .juri__item {
   position: relative;
-  flex: 0 0 auto;
-  width: 260px;
-  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 260px;
+  margin: 0 auto;
+}
+
+.juri__img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .juri__name {
   position: absolute;
+  font-weight: 400;
   font-size: 22px;
   line-height: 22px;
+  margin: 0;
   text-align: center;
-  bottom: 0;
-  left: 8%;
+  bottom: 8%;
+  left: 25%;
   color: v.$white;
 }
 
+// .juri__button {
+//   @include m.only-mobile {
+//     display: none;
+//   }
+
+//   display: flex;
+//   justify-content: flex-end;
+//   align-items: center;
+//   width: 50px;
+//   height: 50px;
+//   border-radius: 100%;
+//   background-color: transparent;
+//   top: 40%;
+//   left: 30%;
+// }
+
 .juri__button {
-  position: relative;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  @include m.only-mobile {
+    display: none;
+  }
+
   width: 50px;
   height: 50px;
   border-radius: 100%;
   background-color: transparent;
-  top: 40%;
-  left: 30%;
+  border: 1px solid transparent;
 }
 
 .juri__button--prev::after {
   position: absolute;
   content: "";
-  width: 23px;
-  height: 23px;
-  border: 1px solid v.$primary;
-  border-right: none;
-  border-top: none;
-  transform: rotate(45deg);
+  display: block;
+  width: 18px;
+  height: 32px;
+  background-color: v.$primary;
+  mask-image: url("/__spritemap#sprite-slider-icon-view");
+  mask-repeat: no-repeat;
+  mask-size: cover;
 }
 
-.juri__button--next::after {
-  position: absolute;
-  content: "";
-  width: 23px;
-  height: 23px;
-  border: 1px solid v.$primary;
-  border-left: none;
-  border-bottom: none;
-  transform: rotate(45deg);
-}
+// .juri__button--next {
+//   position: absolute;
+//   right: 0;
+// }
+
+// .juri__button--prev::after {
+//   position: absolute;
+//   content: "";
+//   width: 23px;
+//   height: 23px;
+//   border: 1px solid v.$primary;
+//   border-right: none;
+//   border-top: none;
+//   transform: rotate(45deg);
+// }
+
+// .juri__button--next::after {
+//   position: absolute;
+//   content: "";
+//   width: 23px;
+//   height: 23px;
+//   border: 1px solid v.$primary;
+//   border-left: none;
+//   border-bottom: none;
+//   transform: rotate(45deg);
+// }
 
 .pop-up {
   display: none;
@@ -84,9 +149,11 @@
   padding-bottom: 51px;
   bottom: 0;
   left: 0;
+  margin: 0 auto;
 }
 
-.juri__item:hover .pop-up {
+.juri__item:hover .pop-up,
+.juri__item:focus .pop-up {
   display: flex;
   flex-direction: column;
 }

@@ -7,7 +7,6 @@
   width: 100%;
   margin: 0 auto;
   padding-bottom: 53.125%;
-  /* 170px / 320px = 0.53125 Сохраняем пропорции 16:9 (или другие ваши пропорции) */
   height: 0;
   overflow: hidden;
 
@@ -29,6 +28,7 @@
   left: 0;
   width: 100%;
   height: 100%;
+  border: 0;
 
 
   @include m.tablet {

@@ -1,7 +1,7 @@
 const faqSection = document.querySelector('.faq');
 const faqLists = faqSection.querySelectorAll('.faq__list');
 
-faqLists.forEach((faqList) => {
+faqLists.forEach(faqList => {
   const faqItems = faqList.querySelectorAll('.faq__item');
 
   faqItems.forEach((faqItem, index) => {
@@ -16,6 +16,7 @@ faqLists.forEach((faqList) => {
       faqBtn.classList.remove('faq__button--closed');
       faqBtn.classList.add('faq__button--opened');
       faqAnswer.style.maxHeight = faqAnswer.scrollHeight + 'px';
+      // faqAnswer.style.marginTop = '20px';
     }
 
 
@@ -24,38 +25,17 @@ faqLists.forEach((faqList) => {
         faqBtn.classList.remove('faq__button--closed');
         faqBtn.classList.add('faq__button--opened');
         faqAnswer.style.maxHeight = faqAnswer.scrollHeight + 'px';
+        // faqAnswer.style.marginTop = '20px';
       } else {
         faqBtn.classList.remove('faq__button--opened');
         faqBtn.classList.add('faq__button--closed');
         faqAnswer.style.maxHeight = '0';
+        // faqAnswer.style.marginTop = '0';
       }
     });
   });
 });
-const accordions = faqSection.querySelectorAll('.faq__list details');
 
-accordions.forEach((accordion) => {
-  const content = accordion.querySelector('.faq__list p');
-
-  if(accordion.open){
-    content.style.maxHeight = content.scrollHeight + 'px';
-  }
-  accordion.addEventListener('toggle', () => {
-    if (accordion.open) {
-      // Даем браузеру время перерисовать
-      requestAnimationFrame(() => {
-        content.style.maxHeight = null;
-        content.style.maxHeight = content.scrollHeight + 'px';
-      });
-    } else {
-      content.style.maxHeight = content.scrollHeight + 'px';
-      requestAnimationFrame(() => {
-        content.style.maxHeight = null;
-        content.style.maxHeight = 0;
-      });
-    }
-  });
-});
 const showFaq = (btn) => {
 
   const targetId = btn.dataset.targetId;
