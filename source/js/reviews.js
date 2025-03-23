@@ -1,15 +1,21 @@
-import Swiper from './vendor/swiper.mjs';
-import Navigation from './vendor/modules/navigation.mjs';
-import Mousewheel from './vendor/modules/mousewheel.mjs';
+import Swiper from 'swiper';
+import {Navigation, Pagination, Mousewheel} from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/mousewheel';
 
-const swiper = new Swiper('.reviews', {
+Swiper.use ([Navigation, Pagination]);
+
+const swiperReviews = new Swiper('.reviews__swiper', {
   modules: [Navigation, Mousewheel],
   loop: true,
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.reviews__button--next',
+    prevEl: '.reviews__button--prev',
   },
   allowTouchMove: true,
-  slidesPerView: 1,
-  spaceBetween: 40,
+  slidesPerView: 2,
+  slidesPerGroup: 1,
+  spaceBetween: 60,
+  speed: 500,
 });

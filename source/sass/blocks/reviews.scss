@@ -6,6 +6,24 @@
   padding: 40px;
   margin: 0 auto;
 }
+
+.reviews .swiper {
+  position: static;
+  width: 240px;
+
+  @include m.tablet {
+    width: 500px;
+  }
+
+  @include m.desktop {
+    width: 560px;
+  }
+}
+
+.reviews__swiper {
+  overflow: hidden;
+}
+
 .reviews__title {
   margin-bottom: 40px;
   text-align: center;
@@ -15,7 +33,7 @@
   @include m.list-reset;
   width: 80%;
   margin: 0 auto;
-  overflow: hidden;
+  display: flex;
 }
 
 .reviews__item {
