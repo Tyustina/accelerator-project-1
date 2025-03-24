@@ -8,6 +8,7 @@
 
   @include m.tablet {
     @include m.container;
+
     grid-template-columns: 278px 400px;
     padding-top: 60px;
     padding-bottom: 60px;
@@ -36,20 +37,20 @@
 
 .offers__wrapper {
   display: grid;
-  padding: 30px 30px 25px 30px;
+  padding: 30px 30px 25px;
   gap: 20px;
   background-color: v.$red;
   color: v.$white;
   justify-items: center;
 
   @include m.tablet {
-    padding: 40px 15px 35px 15px;
+    padding: 40px 15px 35px;
     align-content: space-between;
     justify-items: start;
   }
 
   @include m.desktop {
-    padding: 40px 45px 35px 45px;
+    padding: 40px 45px 35px;
   }
 }
 
@@ -156,7 +157,7 @@
   opacity: 0.8;
 }
 
-.offers__link:hover:after {
+.offers__link:hover::after {
   opacity: 0.8;
 }
 
@@ -164,7 +165,7 @@
   opacity: 0.8;
 }
 
-.offers__link:focus:after {
+.offers__link:focus::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -176,7 +177,7 @@
   transition: none;
 }
 
-.offers__link:active:after {
+.offers__link:active::after {
   content: "";
   position: absolute;
   width: 80%;
@@ -188,19 +189,19 @@
 }
 
 .offers__img {
-  display: flex;
   width: 100%;
   min-height: 360px;
-  background-image: image-set(url("../../img/offers.webp") 1x type("image/webp"),
-      url("../../img/offers@2x.webp") 2x type("image/webp"),
-      url("../../img/offers.jpg") 1x type("image/jpeg"),
-      url("../../img/offers@2x.jpg") 2x type("image/jpeg"));
+  background-image:
+    image-set(url("../../img/offers.webp") 1x type("image/webp"),
+    url("../../img/offers@2x.webp") 2x type("image/webp"),
+    url("../../img/offers.jpg") 1x type("image/jpeg"),
+    url("../../img/offers@2x.jpg") 2x type("image/jpeg"));
   display: flex;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   margin: auto;
-  background-color: red;
+  background-color: v.$red;
 
   @include m.tablet {
     width: 400px;
@@ -246,7 +247,7 @@
   color: v.$dark-blue;
   border: 7px solid transparent;
   background: v.$white;
-  padding: 20px 20px 16px 20px;
+  padding: 20px 20px 16px;
   text-align: center;
   justify-items: center;
   border-image-source: linear-gradient(151deg, v.$red 0%, v.$blue 100%);
@@ -308,7 +309,7 @@
   width: 80%;
   height: 1px;
   background-color: v.$divider;
-  ;
+
   bottom: 5px;
   left: 10%;
   transition: 0.3s ease-in-out;
@@ -318,7 +319,7 @@
   opacity: 0.8;
 }
 
-.offers__link--dark:hover:after {
+.offers__link--dark:hover::after {
   background-color: v.$dark-blue;
   opacity: 0.8;
 }
@@ -327,7 +328,7 @@
   opacity: 0.8;
 }
 
-.offers__link--dark:focus:after {
+.offers__link--dark:focus::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -339,7 +340,7 @@
   transition: none;
 }
 
-.offers__link--dark:active:after {
+.offers__link--dark:active::after {
   content: "";
   position: absolute;
   width: 80%;

@@ -6,7 +6,7 @@ import 'swiper/css/mousewheel';
 
 Swiper.use ([Navigation, Pagination]);
 
-const swiperReviews = new Swiper('.reviews__swiper', {
+new Swiper('.reviews__swiper', {
   modules: [Navigation, Mousewheel],
   loop: true,
   navigation: {
@@ -14,7 +14,7 @@ const swiperReviews = new Swiper('.reviews__swiper', {
     prevEl: '.reviews__button--prev',
   },
   allowTouchMove: true,
-  slidesPerView: 2,
+  slidesPerView: 1,
   slidesPerGroup: 1,
   spaceBetween: 60,
   speed: 500,

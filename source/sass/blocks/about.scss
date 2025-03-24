@@ -16,6 +16,7 @@
 
   @include m.desktop {
     @include m.container;
+
     display: grid;
     grid-template-columns: 355px 1fr;
     padding-left: 105px;
@@ -48,7 +49,6 @@
   @include m.desktop {
     margin-bottom: 26px;
     text-align: left;
-
   }
 }
 

@@ -4,9 +4,11 @@
 
 .socials__list {
   @include m.list-reset;
+
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+
   @include m.tablet {
     gap: 15px;
     margin-top: 3px;
@@ -29,7 +31,7 @@
   background: v.$white;
 }
 
-.socials__link--vk::after{
+.socials__link--vk::after {
   position: absolute;
   top: 5px;
   left: 5px;
@@ -40,12 +42,13 @@
   mask-image: url("/__spritemap#sprite-vk-view");
   mask-repeat: no-repeat;
   mask-size: cover;
+
   &:hover {
     background-color: v.$white;
   }
 }
 
-.socials__link--ok::after{
+.socials__link--ok::after {
   position: absolute;
   top: 4px;
   left: 5px;
@@ -58,7 +61,7 @@
   mask-size: cover;
 }
 
-.socials__link--reddit::after{
+.socials__link--reddit::after {
   position: absolute;
   top: 4px;
   left: 4px;
@@ -87,15 +90,14 @@
   background: v.$white30;
 }
 
-.socials__link--vk:hover:after,
-.socials__link--reddit:hover:after,
-.socials__link--ok:hover:after {
+.socials__link--vk:hover::after,
+.socials__link--reddit:hover::after,
+.socials__link--ok:hover::after {
   background-color: v.$white;
 }
 
-.socials__link--vk:disabled:after,
-.socials__link--reddit:disabled:after,
-.socials__link--ok:disabled:after {
+.socials__link--vk:disabled::after,
+.socials__link--reddit:disabled::after,
+.socials__link--ok:disabled::after {
   background-color: v.$black;
 }
-

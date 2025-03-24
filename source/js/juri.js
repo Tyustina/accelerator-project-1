@@ -6,7 +6,7 @@ import 'swiper/css/mousewheel';
 
 Swiper.use ([Navigation, Pagination]);
 
-const swiperJuri = new Swiper('.juri__swiper', {
+new Swiper('.juri__swiper', {
   modules: [Navigation, Pagination, Mousewheel],
   loop: true,
   navigation: {
@@ -32,4 +32,3 @@ const swiperJuri = new Swiper('.juri__swiper', {
     }
   }
 });
-

@@ -11,7 +11,9 @@
 
 .info__free-training {
   @include m.container;
+
   background-color: v.$primary;
+
   @include m.desktop {
     width: auto;
     padding: 0;
@@ -42,7 +44,8 @@
   }
 
   @include m.desktop {
-  text-align: left;  }
+    text-align: left;
+  }
 }
 
 .info__contacts {
@@ -50,7 +53,7 @@
   padding-bottom: 38px;
 
   @include m.tablet {
-    padding: 60px 164px 50px 164px;
+    padding: 60px 164px 50px;
   }
 
   @include m.desktop {

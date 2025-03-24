@@ -1,4 +1,4 @@
-const tabsList = document.querySelector('.price')
+const tabsList = document.querySelector('.price');
 
 const showTab = (btn) => {
   if (btn.classList.contains('price__tab--active')) {
@@ -15,7 +15,7 @@ const showTab = (btn) => {
     btn.classList.add('price__tab--active');
     elTabList.classList.add('price__list--active');
   }
-}
+};
 
 tabsList.addEventListener('click', (e) => {
   if (e.target && !e.target.closest('.price__tabs')) {
@@ -25,6 +25,3 @@ tabsList.addEventListener('click', (e) => {
   const btn = e.target.closest('.price__tab');
   showTab(btn);
 });
-
-
-

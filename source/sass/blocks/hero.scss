@@ -24,19 +24,21 @@
   }
 
   @include m.tablet {
-    background-image: image-set(url("../../img/hero-img@2x.webp") 2x type("image/webp"),
-        url("../../img/hero-img.webp") 1x type("image/webp"),
-        url("../../img/hero-img@2x.jpg") 2x type("image/jpg"),
-        url("../../img/hero-img.jpg") 1x type("image/jpg"));
+    background-image:
+      image-set(url("../../img/hero-img@2x.webp") 2x type("image/webp"),
+      url("../../img/hero-img.webp") 1x type("image/webp"),
+      url("../../img/hero-img@2x.jpg") 2x type("image/jpg"),
+      url("../../img/hero-img.jpg") 1x type("image/jpg"));
     width: 324px;
     height: 390px;
   }
 
   @include m.desktop {
-    background-image: image-set(url("../../img/hero-img-big@2x.webp") 2x type("image/webp"),
-        url("../../img/hero-img-big.webp") 1x type("image/webp"),
-        url("../../img/hero-img-big@2x.jpg") 2x type("image/jpg"),
-        url("../../img/hero-img-big.jpg") 1x type("image/jpg"));
+    background-image:
+      image-set(url("../../img/hero-img-big@2x.webp") 2x type("image/webp"),
+      url("../../img/hero-img-big.webp") 1x type("image/webp"),
+      url("../../img/hero-img-big@2x.jpg") 2x type("image/jpg"),
+      url("../../img/hero-img-big.jpg") 1x type("image/jpg"));
     width: 500px;
     height: 524px;
   }
@@ -91,6 +93,7 @@
 
 .hero__list {
   @include list-reset;
+
   font-size: 14px;
   line-height: 20px;
   text-align: right;
@@ -132,10 +135,10 @@
     padding-top: 32px;
     padding-bottom: 32px;
   }
+
   @include m.desktop {
     padding-top: 50px;
     margin-right: 40px;
-
   }
 }
 

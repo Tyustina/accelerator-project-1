@@ -4,6 +4,7 @@
 .subtitle {
   font-size: 18px;
   line-height: 20px;
+
   @include m.tablet {
     font-size: 20px;
     text-align: center;

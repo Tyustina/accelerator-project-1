@@ -20,6 +20,7 @@
 .faq__wrapper {
   @include m.desktop {
     @include m.container;
+
     display: grid;
     grid-template-columns: 260px 1fr;
     row-gap: 50px;
@@ -45,6 +46,7 @@
 .faq__tabs {
   @include m.list-reset;
   @include m.container;
+
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -109,6 +111,7 @@
 .faq__list {
   @include m.list-reset;
   @include m.container;
+
   display: none;
 }
 
@@ -128,12 +131,11 @@
   grid-template-columns: 1fr min-content;
   grid-template-rows: auto;
   column-gap: 22px;
-  padding-top: 20px;
   align-items: center;
   padding-top: 20px;
-  padding-bottom: 20px;
+  // padding-bottom: 20px;
   border-top: 1px solid v.$divider;
-  border-collapse: collapse;
+  box-sizing: border-box;
 
   @include m.tablet {
     justify-content: space-between;
@@ -145,7 +147,6 @@
 
   @include m.desktop {
     grid-template-columns: 660px min-content;
-
   }
 }
 
@@ -155,6 +156,7 @@
 
 .faq__item h3 {
   @include m.list-reset;
+
   margin: 0;
   font-size: 20px;
   line-height: 100%;
@@ -170,15 +172,20 @@
   }
 }
 
-.faq__item p {
+.faq__item div {
   grid-column: 1/2;
   grid-row: 2/-1;
   margin: 0;
+  padding: 20px 0;
+}
+
+.faq__item p {
   font-weight: 300;
   font-size: 16px;
   line-height: 20px;
   overflow: hidden;
   transition: max-height 0.3s ease-out;
+  margin: 0;
 
   @include m.tablet {
     font-size: 18px;
@@ -258,4 +265,3 @@
     top: 9px;
   }
 }
-

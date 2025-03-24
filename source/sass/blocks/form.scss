@@ -6,8 +6,6 @@
   flex-direction: column;
   gap: 32px;
 
-  @include m.tablet {}
-
   @include m.tablet {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -19,6 +17,7 @@
     column-gap: 30px;
   }
 }
+
 .form__text {
   position: relative;
 }
@@ -34,10 +33,6 @@
   font-size: 14px;
   line-height: 22px;
   color: v.$white;
-}
-
-.form__input::placeholder {
-  color: v.$white40;
 }
 
 .form__input:hover {
@@ -72,6 +67,7 @@
   font-size: 14px;
   line-height: 22px;
   opacity: 0.4;
+  color: v.$white40;
 }
 
 .form__error {
@@ -86,7 +82,7 @@
 }
 
 .form__input--error {
-border-bottom: 1px solid v.$error;;
+  border-bottom: 1px solid v.$error;
 }
 
 .form__button {
@@ -99,7 +95,7 @@ border-bottom: 1px solid v.$error;;
     padding-top: 26px;
     padding-bottom: 24px;
     grid-column: 1/-1;
-margin: 0;
+    margin: 0;
   }
 
   @include m.desktop {

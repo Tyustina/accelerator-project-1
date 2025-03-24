@@ -1,10 +1,10 @@
 const faqSection = document.querySelector('.faq');
 const faqLists = faqSection.querySelectorAll('.faq__list');
 
-faqLists.forEach(faqList => {
+faqLists.forEach((faqList) => {
   const faqItems = faqList.querySelectorAll('.faq__item');
 
-  faqItems.forEach((faqItem, index) => {
+  faqItems.forEach((faqItem) => {
     const faqAnswer = faqItem.querySelector('p');
     const faqBtn = faqItem.querySelector('.faq__button');
 
@@ -12,25 +12,23 @@ faqLists.forEach(faqList => {
     faqAnswer.style.overflow = 'hidden';
     faqAnswer.style.transition = 'max-height 0.3s ease-out';
 
-    if (index === 0) {
+    if (faqItem.classList.contains('faq__item--active')) {
       faqBtn.classList.remove('faq__button--closed');
       faqBtn.classList.add('faq__button--opened');
-      faqAnswer.style.maxHeight = faqAnswer.scrollHeight + 'px';
-      // faqAnswer.style.marginTop = '20px';
+      faqAnswer.style.maxHeight = `${faqAnswer.scrollHeight}px`;
     }
 
-
-    faqBtn.addEventListener('click', () => {
+    faqItem.addEventListener('click', () => {
       if (faqBtn.classList.contains('faq__button--closed')) {
         faqBtn.classList.remove('faq__button--closed');
         faqBtn.classList.add('faq__button--opened');
-        faqAnswer.style.maxHeight = faqAnswer.scrollHeight + 'px';
-        // faqAnswer.style.marginTop = '20px';
+        faqItem.classList.add('faq__item--active');
+        faqAnswer.style.maxHeight = `${faqAnswer.scrollHeight}px`;
       } else {
         faqBtn.classList.remove('faq__button--opened');
+        faqItem.classList.remove('faq__item--active');
         faqBtn.classList.add('faq__button--closed');
         faqAnswer.style.maxHeight = '0';
-        // faqAnswer.style.marginTop = '0';
       }
     });
   });
@@ -48,6 +46,16 @@ const showFaq = (btn) => {
     faqListActive.classList.remove('faq__list--active');
     btn.classList.add('faq__tab--active');
     elFaqList.classList.add('faq__list--active');
+  }
+
+  const activeFaqItem = elFaqList.querySelector('.faq__item--active');
+  if (activeFaqItem) {
+    const faqBtn = activeFaqItem.querySelector('.faq__button');
+    const faqAnswer = activeFaqItem.querySelector('div');
+
+    faqBtn.classList.remove('faq__button--closed');
+    faqBtn.classList.add('faq__button--opened');
+    faqAnswer.style.maxHeight = `${faqAnswer.scrollHeight}px`;
   }
 };
 

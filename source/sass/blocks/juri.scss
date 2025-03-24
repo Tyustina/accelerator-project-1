@@ -52,6 +52,7 @@
 
 .juri__list {
   @include m.list-reset;
+
   display: flex;
   align-items: center;
 
@@ -100,8 +101,6 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  width: 50px;
-  height: 50px;
   border-radius: 100%;
   background-color: transparent;
   border: 1px solid transparent;
@@ -137,7 +136,7 @@
   }
 }
 
-.juri .swiper-button-prev:after {
+.juri .swiper-button-prev::after {
   position: absolute;
   content: "";
   display: block;
@@ -151,7 +150,7 @@
   top: 7px;
 }
 
-.juri .swiper-button-next:after {
+.juri .swiper-button-next::after {
   position: absolute;
   content: "";
   display: block;
@@ -187,8 +186,9 @@
 }
 
 .pop-up {
-  display: none;
   position: absolute;
+  display: flex;
+  flex-direction: column;
   width: 260px;
   height: 300px;
   background-color: rgba(16, 38, 84, 0.89);
@@ -201,12 +201,15 @@
   bottom: 0;
   left: 0;
   margin: 0 auto;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(100%);
 }
 
 .juri__item:hover .pop-up,
 .juri__item:focus .pop-up {
-  display: flex;
-  flex-direction: column;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .juri__item:hover .juri__name {
@@ -248,14 +251,13 @@
   box-sizing: border-box;
 }
 
-.swiper .juri__buttons {
-  display: none;
+// .swiper .juri__buttons {
+//   display: none;
 
-  @include m.tablet {
-    display: flex;
-    outline: 1px solid red;
-  }
-}
+//   @include m.tablet {
+//     display: flex;
+//   }
+// }
 
 .swiper .swiper-slide {
   display: flex;

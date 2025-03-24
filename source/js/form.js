@@ -40,4 +40,3 @@
 //     inputElement.classList.add('invalid'); // Добавляем класс invalid, если не валидно
 //   }
 // }
-

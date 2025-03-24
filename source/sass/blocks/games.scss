@@ -3,6 +3,7 @@
 
 .games {
   @include m.container;
+
   display: grid;
   color: v.$white;
   padding-top: 25px;
@@ -104,14 +105,17 @@
     gap: 7px;
   }
 }
+
 .games__block--time {
   @include m.tablet {
     gap: 2px;
   }
+
   @include m.desktop {
     gap: 7px;
   }
 }
+
 .games__text {
   position: relative;
   font-weight: 700;
@@ -156,6 +160,7 @@
   line-height: 20px;
   margin: 0;
   padding-right: 22px;
+
   @include m.tablet {
     font-size: 18px;
     line-height: 24px;
@@ -179,10 +184,11 @@
   display: flex;
   width: 290px;
   height: 290px;
-  background-image: image-set(url("../../img/games-desk.webp") 1x type("image/webp"),
-      url("../../img/games-desk@2x.webp") 2x type("image/webp"),
-      url("../../img/games-desk.jpg") 1x type("image/jpeg"),
-      url("../../img/games-desk@2x.jpg") 2x type("image/jpeg"));
+  background-image:
+    image-set(url("../../img/games-desk.webp") 1x type("image/webp"),
+    url("../../img/games-desk@2x.webp") 2x type("image/webp"),
+    url("../../img/games-desk.jpg") 1x type("image/jpeg"),
+    url("../../img/games-desk@2x.jpg") 2x type("image/jpeg"));
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -190,7 +196,6 @@
   @include m.tablet {
     width: 378px;
     height: 348px;
-
   }
 
   @include m.desktop {
