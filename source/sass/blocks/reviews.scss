@@ -1,6 +1,7 @@
 @use "../common/variables.scss" as v;
 @use "../common/mixin.scss" as m;
-.reviews{
+
+.reviews {
   @include m.container;
   position: relative;
   padding: 40px;
@@ -24,6 +25,26 @@
   overflow: hidden;
 }
 
+.reviews__swiper .swiper-slide {
+  display: grid;
+  gap: 10px;
+  justify-items: center;
+  background-color: v.$dark-blue;
+  padding: 30px 25px;
+  color: v.$white;
+
+  @include m.tablet {
+    grid-template-columns: max-content 1fr;
+    gap: 40px;
+    padding: 40px 30px;
+  }
+
+  @include m.desktop {
+    padding: 60px;
+    grid-area: 30px;
+  }
+}
+
 .reviews__title {
   margin-bottom: 40px;
   text-align: center;
@@ -36,19 +57,35 @@
   display: flex;
 }
 
-.reviews__item {
-  display: grid;
-  justify-items: center;
-  background-color: v.$dark-blue;
-  padding: 30px 25px;
-  color: v.$white;
+.reviews__item div:first-child {
+  width: 68px;
+  height: 68px;
+  border-radius: 100%;
+  box-shadow: 0 0 40px 0 rgba(28, 51, 116, 0.2);
+  background-color: white;
+}
+
+.reviews__item div:last-child {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 16px;
+
+  @include m.tablet {
+    text-align: left;
+    gap: 20px;
+  }
 }
 
 .reviews__item h3 {
   font-size: 18px;
   line-height: 20px;
   margin: 0;
-  margin-bottom: 16px;
+
+  @include m.tablet {
+    font-size: 22px;
+    line-height: 22px;
+  }
 }
 
 .reviews__item p {
@@ -56,17 +93,14 @@
   font-size: 14px;
   line-height: 22px;
   margin: 0;
-  text-align: center;
+
+  @include m.tablet {
+    font-style: 16px;
+    line-height: 24px;
+  }
 }
 
-.reviews__item div {
-  width: 68px;
-  height: 68px;
-  border-radius: 100%;
-  box-shadow: 0 0 40px 0 rgba(28, 51, 116, 0.2);
-  background-color: white;
-  margin-bottom: 10px;
-}
+
 
 // .reviews__button {
 //   @include m.only-mobile {
