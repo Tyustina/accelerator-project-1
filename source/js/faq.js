@@ -5,7 +5,7 @@ faqLists.forEach((faqList) => {
   const faqItems = faqList.querySelectorAll('.faq__item');
 
   faqItems.forEach((faqItem) => {
-    const faqAnswer = faqItem.querySelector('p');
+    const faqAnswer = faqItem.querySelector('div');
     const faqBtn = faqItem.querySelector('.faq__button');
 
     faqAnswer.style.maxHeight = '0';
