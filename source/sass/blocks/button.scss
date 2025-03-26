@@ -3,10 +3,11 @@
 
 .button {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  align-content: center;
   width: auto;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding: 25px 15px;
   box-sizing: border-box;
   font-weight: 700;
   font-size: 12px;

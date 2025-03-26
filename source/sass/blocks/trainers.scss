@@ -1,7 +1,7 @@
 @use "../common/variables.scss" as v;
 @use "../common/mixin.scss" as m;
 
-.juri {
+.trainers {
   @include m.container;
 
   padding-top: 40px;
@@ -20,14 +20,14 @@
   }
 }
 
-.juri__swiper {
+.trainers__swiper {
   display: flex;
   flex-direction: column;
   text-align: center;
   overflow: hidden;
 }
 
-.juri .swiper {
+.trainers .swiper {
   position: static;
   width: 260px;
 
@@ -40,7 +40,7 @@
   }
 }
 
-.juri__title {
+.trainers__title {
   margin-bottom: 20px;
   text-align: center;
 
@@ -50,7 +50,7 @@
   }
 }
 
-.juri__list {
+.trainers__list {
   @include m.list-reset;
 
   display: flex;
@@ -65,7 +65,7 @@
   }
 }
 
-.juri__item {
+.trainers__item {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -73,13 +73,13 @@
   margin: 0 auto;
 }
 
-.juri__img {
+.trainers__img {
   display: block;
   max-width: 100%;
   height: auto;
 }
 
-.juri__name {
+.trainers__name {
   position: absolute;
   font-weight: 400;
   font-size: 22px;
@@ -92,11 +92,7 @@
   color: v.$white;
 }
 
-.juri__button {
-  @include m.only-mobile {
-    display: none;
-  }
-
+.trainers__button {
   position: absolute;
   display: flex;
   justify-content: flex-end;
@@ -106,7 +102,10 @@
   border: 1px solid transparent;
 }
 
-.juri .swiper-button-prev {
+.trainers .swiper-button-prev {
+  @include m.only-mobile {
+    display: none;
+  }
   @include m.tablet {
     width: 50px;
     height: 50px;
@@ -120,7 +119,10 @@
   }
 }
 
-.juri .swiper-button-next {
+.trainers .swiper-button-next {
+  @include m.only-mobile {
+    display: none;
+  }
   @include m.tablet {
     display: flex;
     align-items: center;
@@ -136,7 +138,7 @@
   }
 }
 
-.juri .swiper-button-prev::after {
+.trainers .swiper-button-prev::after {
   position: absolute;
   content: "";
   display: block;
@@ -150,7 +152,7 @@
   top: 7px;
 }
 
-.juri .swiper-button-next::after {
+.trainers .swiper-button-next::after {
   position: absolute;
   content: "";
   display: block;
@@ -163,25 +165,25 @@
   top: 7px;
 }
 
-.juri__button--prev:hover,
-.juri__button--next:hover {
+.trainers__button--prev:hover,
+.trainers__button--next:hover {
   border-color: v.$primary;
 }
 
-.juri__button--prev:focus,
-.juri__button--next:focus {
+.trainers__button--prev:focus,
+.trainers__button--next:focus {
   border-color: v.$primary;
   background-color: v.$dirty-white;
 }
 
-.juri__button--prev:active,
-.juri__button--next:active {
+.trainers__button--prev:active,
+.trainers__button--next:active {
   border-color: v.$primary;
   background-color: v.$primary;
 }
 
-.juri__button--prev:active::after,
-.juri__button--next:active::after {
+.trainers__button--prev:active::after,
+.trainers__button--next:active::after {
   background-color: v.$white;
 }
 
@@ -206,13 +208,13 @@
   transform: translateY(100%);
 }
 
-.juri__item:hover .pop-up,
-.juri__item:focus .pop-up {
+.trainers__item:hover .pop-up,
+.trainers__item:focus .pop-up {
   opacity: 1;
   transform: translateY(0);
 }
 
-.juri__item:hover .juri__name {
+.trainers__item:hover .trainers__name {
   display: none;
 }
 
@@ -250,14 +252,6 @@
   transform: none;
   box-sizing: border-box;
 }
-
-// .swiper .juri__buttons {
-//   display: none;
-
-//   @include m.tablet {
-//     display: flex;
-//   }
-// }
 
 .swiper .swiper-slide {
   display: flex;

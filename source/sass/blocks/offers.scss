@@ -198,14 +198,15 @@
     url("../../img/offers@2x.jpg") 2x type("image/jpeg"));
   display: flex;
   background-repeat: no-repeat;
-  background-position: center center;
   background-size: cover;
+  background-position: center;
   margin: auto;
   background-color: v.$red;
 
   @include m.tablet {
     width: 400px;
     height: 462px;
+
   }
 
   @include m.desktop {

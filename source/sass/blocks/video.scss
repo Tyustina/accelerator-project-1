@@ -3,22 +3,23 @@
 
 .video {
   position: relative;
-  align-content: center;
   width: 100%;
-  margin: 0 auto;
-  padding-bottom: 53%;
-  height: 0;
-  overflow: hidden;
+  padding-bottom: 150px;
+  height: auto;
 
   @include m.tablet {
     position: absolute;
-    bottom: -275px;
+    bottom: -84px;
     left: 204px;
+    width: 270px;
+    height: 170px;
   }
 
   @include m.desktop {
     left: 7px;
-    bottom: -293px;
+    top: 285px;
+    width: 360px;
+    height: 230px;
   }
 }
 

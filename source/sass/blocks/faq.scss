@@ -191,12 +191,14 @@
   @include m.tablet {
     font-size: 18px;
     line-height: 24px;
-    margin-top: 10px;
   }
 }
 
 .faq__item p:first-child {
   padding-top: 20px;
+  @include m.tablet {
+    padding-top: 22px;
+  }
 }
 
 .faq__button {

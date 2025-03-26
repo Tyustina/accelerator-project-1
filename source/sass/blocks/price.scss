@@ -6,6 +6,7 @@
   padding-top: 40px;
   padding-bottom: 40px;
   z-index: 1;
+  overflow: hidden;
 
   @include m.tablet {
     padding-top: 61px;
@@ -21,11 +22,19 @@
 
 .price__container {
   @include m.container;
+  @include m.tablet {
+    padding-left: 194px;
+    padding-right: 194px;
+  }
+  @include m.desktop {
+    @include m.container;
+  }
 }
 
 .price__title {
   text-align: center;
   margin-bottom: 30px;
+
 
   @include m.tablet {
     margin-bottom: 36px;
@@ -101,17 +110,6 @@
   color: v.$primary70;
 }
 
-.price__tabs::after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background-color: v.$gray;
-  bottom: -2px;
-  left: 0;
-}
-
 .price__tab:hover::after {
   content: "";
   display: block;
@@ -147,10 +145,8 @@
 }
 
 .price__list {
-  position: relative;
-
   @include m.list-reset;
-
+  position: relative;
   display: none;
 }
 
@@ -210,10 +206,11 @@
   @include m.tablet {
     padding: 58px;
     gap: 21px;
+    margin: 0;
   }
 
   @include m.desktop {
-    margin: 0 auto;
+    width: 360px;
     gap: 16px;
   }
 }
@@ -260,7 +257,9 @@
 .price__wrapper {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  align-content: center;
 }
 
 .price__shadow {
@@ -325,15 +324,15 @@
 
 .price__button {
   display: flex;
+  width: 100%;
   padding: 25px 48px;
   margin-top: -1px;
 
   @include m.tablet {
-    padding: 25px 70px;
+    padding: 25px 0;
   }
 
   @include m.desktop {
-    padding: 25px 59px;
     margin-top: -2px;
   }
 }
