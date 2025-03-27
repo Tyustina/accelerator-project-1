@@ -1,11 +1,11 @@
 import Swiper from 'swiper';
-import {Navigation} from 'swiper/modules';
+import {Navigation, Mousewheel} from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/mousewheel';
 
-new Swiper('.trainers__swiper', {
-  modules: [Navigation ],
+const trainersSwiper = new Swiper('.trainers__swiper', {
+  modules: [Navigation, Mousewheel ],
   loop: true,
   navigation: {
     nextEl: '.trainers__button--next',
@@ -31,8 +31,8 @@ new Swiper('.trainers__swiper', {
   }
 });
 
-new Swiper('.reviews__swiper', {
-  modules: [Navigation],
+const reviewsSwiper = new Swiper('.reviews__swiper', {
+  modules: [Navigation, Mousewheel],
   loop: false,
   navigation: {
     nextEl: '.swiper-button-next',
@@ -57,3 +57,6 @@ new Swiper('.reviews__swiper', {
     }
   }
 });
+
+trainersSwiper.init();
+reviewsSwiper.init();

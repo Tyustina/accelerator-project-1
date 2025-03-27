@@ -12,4 +12,5 @@ videoButton.addEventListener('click', () => {
   // Скрываем placeholder и кнопку
   videoPlaceholder.style.display = 'none';
   videoButton.style.display = 'none';
+  videoContainer.classList.add('video--no-after');
 });

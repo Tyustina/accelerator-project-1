@@ -1,31 +1,33 @@
 const form = document.querySelector('.form');
-const inputName = form.querySelector(`input[name='name']`);
-const inputTel = form.querySelector(`input[name='tel']`);
-const inputNamePattern = /^[a-zA-Zа-яА-Я\s]+/;
-const inputTelPattern = /^[0-9]$/;
+const nameInput = form.querySelector('.form__input--name');
+const telInput = form.querySelector('.form__input--tel');
+const nameRegex = /^[a-zа-яё\s-]+$/i;
+const telRegex = /^[+78][0-9]{10}$/;
+const nameError = form.querySelector('.form__error--name');
+const telError = form.querySelector('.form__error--tel');
 
-inputName.addEventListener('invalid', () => {
-  // e.preventDefault();
 
-  const nameValue = inputName.value;
-  const isValidName = inputNamePattern.test(nameValue);
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
 
-  if(!isValidName) {
-    console.log('Invalid name');
-  }else {
-    console.log('Valid name');
+  let isValid = true;
+
+  if (!nameRegex.test(nameInput.value)) {
+    nameError.textContent = 'Ошибка валидности имени!';
+    isValid = false;
+  } else {
+    nameError.textContent = '';
   }
-});
 
-inputTel.addEventListener('invalid', () => {
-  // e.preventDefault();
+  if (!telRegex.test(telInput.value)) {
+    telError.textContent = 'Ошибка валидности номера';
+    isValid = false;
+  } else {
+    telError.textContent = '';
+  }
 
-  const telValue = inputTel.value;
-  const isValid = inputTelPattern.test(telValue);
-
-  if(!isValid) {
-    console.log('Invalid name');
-  }else {
-    console.log('Valid name');
+  if (isValid) {
+  } else {
+    e.preventDefault();
   }
 });

@@ -41,7 +41,8 @@
   opacity: 0.5;
 }
 
-.header__link:focus {
+.header__link:focus,
+.header__link:focus-visible {
   color: v.$dark-blue;
 }
 

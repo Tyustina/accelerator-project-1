@@ -39,7 +39,8 @@
   border-color: v.$white;
 }
 
-.form__input:focus {
+.form__input:focus,
+.form__input:focus-visible {
   border: 1px solid v.$white;
 }
 

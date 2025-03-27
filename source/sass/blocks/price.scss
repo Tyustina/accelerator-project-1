@@ -10,7 +10,7 @@
 
   @include m.tablet {
     padding-top: 61px;
-    padding-bottom: 59px;
+    padding-bottom: 60px;
   }
 
   @include m.desktop {
@@ -22,10 +22,12 @@
 
 .price__container {
   @include m.container;
+
   @include m.tablet {
     padding-left: 194px;
     padding-right: 194px;
   }
+
   @include m.desktop {
     @include m.container;
   }
@@ -76,6 +78,7 @@
   padding: 0;
   padding-bottom: 7px;
   opacity: 0.5;
+  cursor: pointer;
 
   @include m.tablet {
     padding-bottom: 6px;
@@ -125,7 +128,8 @@
   background-color: v.$red;
 }
 
-.price__tab:focus {
+.price__tab:focus,
+.price__tab:focus-visible{
   color: v.$primary;
   opacity: 1;
 }
@@ -162,7 +166,8 @@
   }
 
   @include m.desktop {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 360px 360px 360px;
     gap: 40px;
   }
 }
@@ -173,10 +178,10 @@
     content: "";
     width: 275px;
     height: 328px;
-    bottom: 0;
-    right: 0;
+    bottom: -28px;
+    right: -236px;
     background-image: url("../../img/price-decor.png");
-    background-position: -4px 0;
+    background-position: -91px -27px;
     background-repeat: no-repeat;
     z-index: -1;
   }
@@ -211,12 +216,17 @@
 
   @include m.desktop {
     width: 360px;
+    overflow: auto;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
     gap: 16px;
   }
 }
 
 .price__item:hover,
-.price__item:focus {
+.price__item:focus,
+.price__item:focus-visible {
   border-image-source: linear-gradient(151deg, v.$red 0%, v.$blue 100%);
   border-image-slice: 1;
 }
@@ -295,12 +305,12 @@
     font-size: 60px;
     line-height: 90px;
     bottom: 1px;
-    left: 43px;
+    left: 50%;
     gap: 14px;
+    transform: translateX(-50%);
   }
 
   @include m.desktop {
-    left: 32px;
     bottom: 2px;
   }
 }
@@ -333,7 +343,10 @@
   }
 
   @include m.desktop {
+    max-width: 230px;
     margin-top: -2px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 

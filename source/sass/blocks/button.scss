@@ -39,7 +39,8 @@
   color: v.$light-blue;
 }
 
-.button--light:focus {
+.button--light:focus,
+.button--light:focus-visible {
   background-color: v.$white80;
   color: v.$light-blue;
   border-color: #000000;
@@ -62,7 +63,8 @@
   color: v.$white;
 }
 
-.button--dark:focus {
+.button--dark:focus,
+.button--dark:focus-visible {
   color: v.$white;
   border-color: #000000;
   background: linear-gradient(90deg, v.$red80 0%, v.$blue80 100%);

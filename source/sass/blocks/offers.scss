@@ -161,7 +161,8 @@
   opacity: 0.8;
 }
 
-.offers__link:focus {
+.offers__link:focus,
+.offers__link:focus-visible {
   opacity: 0.8;
 }
 
@@ -325,7 +326,8 @@
   opacity: 0.8;
 }
 
-.offers__link--dark:focus {
+.offers__link--dark:focus,
+.offers__link--dark:focus-visible {
   opacity: 0.8;
 }
 

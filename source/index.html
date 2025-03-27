@@ -64,15 +64,21 @@
             alt="Тренажерный зал.">
         </picture>
         <div class="video">
-          <div class="video__button"></div>
+          <button type="button" class="video__button"></button>
           <iframe class="video__link" width="320" height="170" src="#" title="Видео о тренажерном зале." allowfullscreen
             loading="lazy"></iframe>
           <picture>
+            <source type="image/webp" srcset="./img/video-placeholder-desk.webp 1x, ./img/video-placeholder-desk.webp 2x"
+            width="270" height="170">
+          <source type="image/jpeg" srcset="./img/video-placeholder-desk.jpg 1x, ./img/video-placeholder-desk.jpg 2x"
+            width="270" height="170">
+
             <source type="image/webp" srcset="./img/video-placeholder-tab.webp 1x, ./img/video-placeholder-tab.webp 2x"
               width="270" height="170">
             <source type="image/jpeg" srcset="./img/video-placeholder-tab.jpg 1x, ./img/video-placeholder-tab.jpg 2x"
               width="270" height="170">
-            <source type="image/webp" srcset="./img/video-placeholder.webp 1x, ./img/video-placeholder@2x.webp 2x"
+
+              <source type="image/webp" srcset="./img/video-placeholder.webp 1x, ./img/video-placeholder@2x.webp 2x"
               width="320" height="170">
             <img class="video__placeholder" src="./img/video-placeholder.jpg" srcset="./img/video-placeholder@2x.jpg"
               width="320" height="170" alt="Видео.">
@@ -213,13 +219,13 @@
                 width="260" height="300">
             </picture>
             <h3 class="trainers__name">Анна Павлова</h3>
-            <div class="trainers__pop-up pop-up">
-              <p class="pop-up__title">Анна Павлова</p>
-              <p class="pop-up__label">CrossFit</p>
-              <ul class="pop-up__list">
-                <li class="pop-up__item">Certified Level 3 Trainer</li>
-                <li class="pop-up__item">Победитель чемпионата России по CrossFit</li>
-                <li class="pop-up__item">Опыт — 6 лет</li>
+            <div class="trainers__overlay overlay">
+              <p class="overlay__title">Анна Павлова</p>
+              <p class="overlay__label">CrossFit</p>
+              <ul class="overlay__list">
+                <li class="overlay__item">Certified Level 3 Trainer</li>
+                <li class="overlay__item">Победитель чемпионата России по CrossFit</li>
+                <li class="overlay__item">Опыт — 6 лет</li>
               </ul>
             </div>
           </li>
@@ -230,13 +236,13 @@
                 width="260" height="300">
             </picture>
             <h3 class="trainers__name">Алексей Лавров</h3>
-            <div class="trainers__pop-up pop-up">
-              <p class="pop-up__title">Алексей Лавров</p>
-              <p class="pop-up__label">CrossFit</p>
-              <ul class="pop-up__list">
-                <li class="pop-up__item">Certified Level 3 Trainer</li>
-                <li class="pop-up__item">Победитель чемпионата России по CrossFit</li>
-                <li class="pop-up__item">Опыт — 6 лет</li>
+            <div class="trainers__overlay overlay">
+              <p class="overlay__title">Алексей Лавров</p>
+              <p class="overlay__label">CrossFit</p>
+              <ul class="overlay__list">
+                <li class="overlay__item">Certified Level 3 Trainer</li>
+                <li class="overlay__item">Победитель чемпионата России по CrossFit</li>
+                <li class="overlay__item">Опыт — 6 лет</li>
               </ul>
             </div>
           </li>
@@ -247,13 +253,13 @@
                 width="260" height="300">
             </picture>
             <h3 class="trainers__name">Александр Пашков</h3>
-            <div class="trainers__pop-up pop-up">
-              <p class="pop-up__title">Александр Пашков</p>
-              <p class="pop-up__label">CrossFit</p>
-              <ul class="pop-up__list">
-                <li class="pop-up__item">Certified Level 3 Trainer</li>
-                <li class="pop-up__item">Победитель чемпионата России по CrossFit</li>
-                <li class="pop-up__item">Опыт — 6 лет</li>
+            <div class="trainers__overlay overlay">
+              <p class="overlay__title">Александр Пашков</p>
+              <p class="overlay__label">CrossFit</p>
+              <ul class="overlay__list">
+                <li class="overlay__item">Certified Level 3 Trainer</li>
+                <li class="overlay__item">Победитель чемпионата России по CrossFit</li>
+                <li class="overlay__item">Опыт — 6 лет</li>
               </ul>
             </div>
           </li>
@@ -264,13 +270,13 @@
                 width="260" height="300">
             </picture>
             <h3 class="trainers__name">Мария Кетова</h3>
-            <div class="trainers__pop-up pop-up">
-              <p class="pop-up__title">Мария Кетова</p>
-              <p class="pop-up__label">CrossFit</p>
-              <ul class="pop-up__list">
-                <li class="pop-up__item">Certified Level 3 Trainer</li>
-                <li class="pop-up__item">Победитель чемпионата России по CrossFit</li>
-                <li class="pop-up__item">Опыт — 6 лет</li>
+            <div class="trainers__overlay overlay">
+              <p class="overlay__title">Мария Кетова</p>
+              <p class="overlay__label">CrossFit</p>
+              <ul class="overlay__list">
+                <li class="overlay__item">Certified Level 3 Trainer</li>
+                <li class="overlay__item">Победитель чемпионата России по CrossFit</li>
+                <li class="overlay__item">Опыт — 6 лет</li>
               </ul>
             </div>
           </li>
@@ -281,13 +287,13 @@
                 width="260" height="300">
             </picture>
             <h3 class="trainers__name">Анна Павлова</h3>
-            <div class="trainers__pop-up pop-up">
-              <p class="pop-up__title">Анна Павлова</p>
-              <p class="pop-up__label">CrossFit</p>
-              <ul class="pop-up__list">
-                <li class="pop-up__item">Certified Level 3 Trainer</li>
-                <li class="pop-up__item">Победитель чемпионата России по CrossFit</li>
-                <li class="pop-up__item">Опыт — 6 лет</li>
+            <div class="trainers__overlay overlay">
+              <p class="overlay__title">Анна Павлова</p>
+              <p class="overlay__label">CrossFit</p>
+              <ul class="overlay__list">
+                <li class="overlay__item">Certified Level 3 Trainer</li>
+                <li class="overlay__item">Победитель чемпионата России по CrossFit</li>
+                <li class="overlay__item">Опыт — 6 лет</li>
               </ul>
             </div>
           </li>
@@ -298,13 +304,13 @@
                 width="260" height="300">
             </picture>
             <h3 class="trainers__name">Алексей Лавров</h3>
-            <div class="trainers__pop-up pop-up">
-              <p class="pop-up__title">Алексей Лавров</p>
-              <p class="pop-up__label">CrossFit</p>
-              <ul class="pop-up__list">
-                <li class="pop-up__item">Certified Level 3 Trainer</li>
-                <li class="pop-up__item">Победитель чемпионата России по CrossFit</li>
-                <li class="pop-up__item">Опыт — 6 лет</li>
+            <div class="trainers__overlay overlay">
+              <p class="overlay__title">Алексей Лавров</p>
+              <p class="overlay__label">CrossFit</p>
+              <ul class="overlay__list">
+                <li class="overlay__item">Certified Level 3 Trainer</li>
+                <li class="overlay__item">Победитель чемпионата России по CrossFit</li>
+                <li class="overlay__item">Опыт — 6 лет</li>
               </ul>
             </div>
           </li>
@@ -315,13 +321,13 @@
                 width="260" height="300">
             </picture>
             <h3 class="trainers__name">Александр Пашков</h3>
-            <div class="trainers__pop-up pop-up">
-              <p class="pop-up__title">Александр Пашков</p>
-              <p class="pop-up__label">CrossFit</p>
-              <ul class="pop-up__list">
-                <li class="pop-up__item">Certified Level 3 Trainer</li>
-                <li class="pop-up__item">Победитель чемпионата России по CrossFit</li>
-                <li class="pop-up__item">Опыт — 6 лет</li>
+            <div class="trainers__overlay overlay">
+              <p class="overlay__title">Александр Пашков</p>
+              <p class="overlay__label">CrossFit</p>
+              <ul class="overlay__list">
+                <li class="overlay__item">Certified Level 3 Trainer</li>
+                <li class="overlay__item">Победитель чемпионата России по CrossFit</li>
+                <li class="overlay__item">Опыт — 6 лет</li>
               </ul>
             </div>
           </li>
@@ -332,13 +338,13 @@
                 width="260" height="300">
             </picture>
             <h3 class="trainers__name">Мария Кетова</h3>
-            <div class="trainers__pop-up pop-up">
-              <p class="pop-up__title">Мария Кетова</p>
-              <p class="pop-up__label">CrossFit</p>
-              <ul class="pop-up__list">
-                <li class="pop-up__item">Certified Level 3 Trainer</li>
-                <li class="pop-up__item">Победитель чемпионата России по CrossFit</li>
-                <li class="pop-up__item">Опыт — 6 лет</li>
+            <div class="trainers__overlay overlay">
+              <p class="overlay__title">Мария Кетова</p>
+              <p class="overlay__label">CrossFit</p>
+              <ul class="overlay__list">
+                <li class="overlay__item">Certified Level 3 Trainer</li>
+                <li class="overlay__item">Победитель чемпионата России по CrossFit</li>
+                <li class="overlay__item">Опыт — 6 лет</li>
               </ul>
             </div>
           </li>
@@ -577,12 +583,6 @@
     <section class="reviews" data-test="reviews">
       <h2 class="reviews__title title">Отзывы</h2>
       <div class="reviews__swiper swiper">
-        <button class="reviews__button reviews__button--prev swiper-button-prev"
-          type="button"><span class="visually-hidden">Предыдущий
-            отзыв</span></button>
-        <button class="reviews__button reviews__button--next swiper-button-next"
-          type="button"><span class="visually-hidden">Следующий
-            отзыв</span></button>
         <ul class="reviews__list swiper-wrapper">
           <li class="reviews__item swiper-slide">
             <div>
@@ -596,7 +596,7 @@
             <div>
               <h3>Анна Орлова</h3>
               <p>«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажёры обновляют, персонал
-                дружелюбный. Зал просторный, даже в вечернее время нет&nbsp;очередей»</p>
+                дружелюбный. Зал&nbsp;просторный, даже&nbsp;в&nbsp;вечернее время нет&nbsp;очередей»</p>
             </div>
           </li>
           <li class="reviews__item swiper-slide">
@@ -611,7 +611,7 @@
             <div>
               <h3>Ирина Петрова</h3>
               <p>«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажёры обновляют, персонал
-                дружелюбный. Зал просторный, даже в вечернее время нет&nbsp;очередей»</p>
+                дружелюбный. Зал&nbsp;просторный, даже&nbsp;в&nbsp;вечернее время нет&nbsp;очередей»</p>
             </div>
           </li>
           <li class="reviews__item swiper-slide">
@@ -626,7 +626,7 @@
             <div>
               <h3>Георгина Шварц</h3>
               <p>«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажёры обновляют, персонал
-                дружелюбный. Зал просторный, даже в вечернее время нет&nbsp;очередей»</p>
+                дружелюбный. Зал&nbsp;просторный, даже&nbsp;в&nbsp;вечернее время нет&nbsp;очередей»</p>
             </div>
           </li>
           <li class="reviews__item swiper-slide">
@@ -642,7 +642,7 @@
             <div>
               <h3>Эльвира Плюх</h3>
               <p>«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажёры обновляют, персонал
-                дружелюбный. Зал просторный, даже в вечернее время нет&nbsp;очередей»</p>
+                дружелюбный. Зал&nbsp;просторный, даже&nbsp;в&nbsp;вечернее время нет&nbsp;очередей»</p>
             </div>
           </li>
           <li class="reviews__item swiper-slide">
@@ -657,7 +657,7 @@
             </div>
             <div>
               <h3>Антонина Козлова</h3>
-              <p>«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажёры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет&nbsp;очередей»</p>
+              <p>«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажёры обновляют, персонал дружелюбный. Зал&nbsp;просторный, даже&nbsp;в&nbsp;вечернее время нет&nbsp;очередей»</p>
             </div>
           </li>
           <li class="reviews__item swiper-slide">
@@ -673,10 +673,16 @@
             <div>
               <h3>Иванка Кукушкина</h3>
               <p>«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажёры обновляют, персонал
-                дружелюбный. Зал просторный, даже в вечернее время нет&nbsp;очередей»</p>
+                дружелюбный. Зал&nbsp;просторный, даже&nbsp;в&nbsp;вечернее время нет&nbsp;очередей»</p>
             </div>
           </li>
         </ul>
+        <button class="reviews__button reviews__button--prev swiper-button-prev"
+          type="button"><span class="visually-hidden">Предыдущий
+            отзыв</span></button>
+        <button class="reviews__button reviews__button--next swiper-button-next"
+          type="button"><span class="visually-hidden">Следующий
+            отзыв</span></button>
 
       </div>
     </section>
@@ -685,12 +691,12 @@
         <div class="info__wrapper">
           <h2 class="info__title title ">Бесплатное занятие</h2>
           <form class="form" action="https://echo.htmlacademy.ru/." method="post">
-            <label class="form__text"><input class="form__input" type="text" name="name" placeholder="Имя"
+            <label class="form__text"><input class="form__input form__input--name" type="text" name="name" placeholder="Имя"
                 pattern="^[a-zA-Zа-яА-Я\s]+$" title="Поле должно содержать только буквы и пробелы" required>
-              <span class="form__error"></span><span class="visually-hidden">Имя пользователя.</span></label>
-            <label class="form__text"><input class="form__input" type="tel" name="tel" placeholder="Телефон"
+              <span class="form__error form__error--name"></span></label>
+            <label class="form__text"><input class="form__input form__input--tel" type="tel" name="tel" placeholder="Телефон"
                 pattern="^[0-9]$" title="Поле должно содержать только цифры" required>
-              <span class="form__error"></span><span class="visually-hidden">Номер телефона пользователя.</span></label>
+              <span class="form__error form__error--tel"></span></label>
             <button class="form__button button button--light" type="submit">Отправить</button>
           </form>
         </div>

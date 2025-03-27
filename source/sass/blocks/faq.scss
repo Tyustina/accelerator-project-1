@@ -23,7 +23,7 @@
 
     display: grid;
     grid-template-columns: 260px 1fr;
-    row-gap: 50px;
+    row-gap: 49px;
     column-gap: 40px;
   }
 }
@@ -50,7 +50,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-bottom: 36px;
+  margin-bottom: 35px;
 
   @include m.tablet {
     margin-bottom: 44px;
@@ -61,6 +61,7 @@
     flex-direction: column;
     padding: 0;
     margin: 0;
+    margin-top: 1px;
   }
 }
 
@@ -87,11 +88,14 @@
 
   @include m.desktop {
     min-width: 260px;
+    line-height: 17px;
+    padding-bottom: 17px;
   }
 }
 
 .faq__tab:hover,
-.faq__tab:focus {
+.faq__tab:focus,
+.faq__tab:focus-visible {
   border-color: v.$primary;
 }
 
@@ -147,6 +151,7 @@
 
   @include m.desktop {
     grid-template-columns: 660px min-content;
+    padding-bottom: 22px;
   }
 }
 
@@ -159,6 +164,7 @@
 
   margin: 0;
   font-size: 20px;
+  font-weight: 400;
   line-height: 100%;
   grid-column: 1/2;
   grid-row: 1/2;
@@ -196,8 +202,13 @@
 
 .faq__item p:first-child {
   padding-top: 20px;
+
   @include m.tablet {
-    padding-top: 22px;
+    padding-top: 10px;
+  }
+
+  @include m.desktop {
+    padding-top: 23px;
   }
 }
 
@@ -229,7 +240,8 @@
   width: 14px;
   height: 2px;
   background-color: v.$white;
-  left: 26%;
+  left: 7px;
+  top: 13px;
 
   @include m.tablet {
     width: 20px;
@@ -248,7 +260,8 @@
   width: 14px;
   height: 2px;
   background-color: v.$dark-blue;
-  left: 26%;
+  left: 7px;
+  top: 13px;
 
   @include m.tablet {
     width: 20px;
@@ -263,8 +276,8 @@
   width: 2px;
   height: 14px;
   background-color: v.$dark-blue;
-  left: 48%;
-  top: 24%;
+  left: 13px;
+  top: 7px;
 
   @include m.tablet {
     height: 20px;

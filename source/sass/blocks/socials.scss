@@ -78,7 +78,8 @@
   background: v.$divider;
 }
 
-.socials__link:focus {
+.socials__link:focus,
+.socials__link:focus-visible {
   background: $light-blue;
 }
 
