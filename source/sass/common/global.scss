@@ -28,6 +28,10 @@ html {
   box-sizing: border-box;
 }
 
+*:focus-visible {
+  outline: none;
+}
+
 img {
   display: block;
   max-width: 100%;

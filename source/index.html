@@ -692,10 +692,10 @@
           <h2 class="info__title title ">Бесплатное занятие</h2>
           <form class="form" action="https://echo.htmlacademy.ru/." method="post">
             <label class="form__text"><input class="form__input form__input--name" type="text" name="name" placeholder="Имя"
-                pattern="^[a-zA-Zа-яА-Я\s]+$" title="Поле должно содержать только буквы и пробелы" required>
+                pattern="^[а-яА-Я\s]+$" title="Поле должно содержать только буквы и пробелы" required>
               <span class="form__error form__error--name"></span></label>
             <label class="form__text"><input class="form__input form__input--tel" type="tel" name="tel" placeholder="Телефон"
-                pattern="^[0-9]$" title="Поле должно содержать только цифры" required>
+              pattern="^[+78][0-9]{10}$" title="Пожалуйста, введите номер телефона в формате +7XXXXXXXXXX или 8XXXXXXXXXX" required>
               <span class="form__error form__error--tel"></span></label>
             <button class="form__button button button--light" type="submit">Отправить</button>
           </form>

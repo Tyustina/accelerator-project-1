@@ -113,7 +113,8 @@
   color: v.$primary70;
 }
 
-.price__tab:hover::after {
+.price__tab:hover::after,
+.price__tab:focus-visible::after {
   content: "";
   display: block;
   position: absolute;

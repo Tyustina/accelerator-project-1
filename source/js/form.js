@@ -1,33 +1,17 @@
 const form = document.querySelector('.form');
 const nameInput = form.querySelector('.form__input--name');
 const telInput = form.querySelector('.form__input--tel');
-const nameRegex = /^[a-zа-яё\s-]+$/i;
-const telRegex = /^[+78][0-9]{10}$/;
 const nameError = form.querySelector('.form__error--name');
 const telError = form.querySelector('.form__error--tel');
 
-
-form.addEventListener('submit', (e) => {
+nameInput.addEventListener('invalid', (e) =>{
   e.preventDefault();
+  nameInput.classList.add('form__input--error');
+  nameError.textContent = 'Имя может содержать только буквы и пробелы';
+});
 
-  let isValid = true;
-
-  if (!nameRegex.test(nameInput.value)) {
-    nameError.textContent = 'Ошибка валидности имени!';
-    isValid = false;
-  } else {
-    nameError.textContent = '';
-  }
-
-  if (!telRegex.test(telInput.value)) {
-    telError.textContent = 'Ошибка валидности номера';
-    isValid = false;
-  } else {
-    telError.textContent = '';
-  }
-
-  if (isValid) {
-  } else {
-    e.preventDefault();
-  }
+telInput.addEventListener('invalid', (e) =>{
+  e.preventDefault();
+  telInput.classList.add('form__input--error');
+  telError.textContent = 'Введите полный номер телефона';
 });
