@@ -65,20 +65,28 @@
         </picture>
         <div class="video">
           <button type="button" class="video__button"></button>
-          <iframe class="video__link" width="320" height="170" src="#" title="Видео о тренажерном зале." allowfullscreen
-            loading="lazy"></iframe>
+          <div class="video__link"></div>
+          <!-- <iframe class="video__link" width="100%" height="100%" src="#" title="Видео о тренажерном зале." allow="accelerometer;
+          autoplay;
+          clipboard-write;
+          encrypted-media;
+          gyroscope;
+          picture-in-picture;
+          web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy">
+        </iframe> -->
           <picture>
-            <source type="image/webp" srcset="./img/video-placeholder-desk.webp 1x, ./img/video-placeholder-desk.webp 2x"
-            width="270" height="170">
-          <source type="image/jpeg" srcset="./img/video-placeholder-desk.jpg 1x, ./img/video-placeholder-desk.jpg 2x"
-            width="270" height="170">
+            <source type="image/webp"
+              srcset="./img/video-placeholder-desk.webp 1x, ./img/video-placeholder-desk.webp 2x" width="270"
+              height="170">
+            <source type="image/jpeg" srcset="./img/video-placeholder-desk.jpg 1x, ./img/video-placeholder-desk.jpg 2x"
+              width="270" height="170">
 
             <source type="image/webp" srcset="./img/video-placeholder-tab.webp 1x, ./img/video-placeholder-tab.webp 2x"
               width="270" height="170">
             <source type="image/jpeg" srcset="./img/video-placeholder-tab.jpg 1x, ./img/video-placeholder-tab.jpg 2x"
               width="270" height="170">
 
-              <source type="image/webp" srcset="./img/video-placeholder.webp 1x, ./img/video-placeholder@2x.webp 2x"
+            <source type="image/webp" srcset="./img/video-placeholder.webp 1x, ./img/video-placeholder@2x.webp 2x"
               width="320" height="170">
             <img class="video__placeholder" src="./img/video-placeholder.jpg" srcset="./img/video-placeholder@2x.jpg"
               width="320" height="170" alt="Видео.">
@@ -202,24 +210,24 @@
       </div>
       <div class="games__img"></div>
     </section>
-    <section class="trainers" data-test="juri">
-      <h2 class="trainers__title title">Жюри</h2>
-      <button class="trainers__button trainers__button--prev swiper-button-prev swiper-button-disabled"
-        type="button"><span class="visually-hidden">Предыдущий
+    <section class="juri" data-test="juri">
+      <h2 class="juri__title title">Жюри</h2>
+      <button class="juri__button juri__button--prev swiper-button-prev swiper-button-disabled" type="button"><span
+          class="visually-hidden">Предыдущий
           слайд</span></button>
-      <button class="trainers__button trainers__button--next swiper-button-next swiper-button-disabled"
-        type="button"><span class="visually-hidden">Предыдущий
+      <button class="juri__button juri__button--next swiper-button-next swiper-button-disabled" type="button"><span
+          class="visually-hidden">Предыдущий
           слайд</span></button>
-      <div class="trainers__swiper swiper">
-        <ul class="trainers__list swiper-wrapper">
-          <li class="trainers__item swiper-slide" tabindex="0">
+      <div class="juri__swiper swiper">
+        <ul class="juri__list swiper-wrapper">
+          <li class="juri__item swiper-slide" tabindex="0">
             <picture>
               <source type="image/webp" srcset="./img/card-1.webp 1x, ./img/card-1@2x.webp 2x" width="260" height="300">
-              <img class="trainers__img" src="./img/card-1.jpg" srcset="./img/card-1@2x.jpg" alt="Фотография тренера."
+              <img class="juri__img" src="./img/card-1.jpg" srcset="./img/card-1@2x.jpg" alt="Фотография тренера."
                 width="260" height="300">
             </picture>
-            <h3 class="trainers__name">Анна Павлова</h3>
-            <div class="trainers__overlay overlay">
+            <h3 class="juri__name">Анна Павлова</h3>
+            <div class="juri__overlay overlay">
               <p class="overlay__title">Анна Павлова</p>
               <p class="overlay__label">CrossFit</p>
               <ul class="overlay__list">
@@ -229,14 +237,14 @@
               </ul>
             </div>
           </li>
-          <li class="trainers__item swiper-slide" tabindex="0">
+          <li class="juri__item swiper-slide" tabindex="0">
             <picture>
               <source type="image/webp" srcset="./img/card-2.webp 1x, ./img/card-2@2x.webp 2x" width="260" height="300">
-              <img class="trainers__img" src="./img/card-2.jpg" srcset="./img/card-2@2x.jpg" alt="Фотография тренера."
+              <img class="juri__img" src="./img/card-2.jpg" srcset="./img/card-2@2x.jpg" alt="Фотография тренера."
                 width="260" height="300">
             </picture>
-            <h3 class="trainers__name">Алексей Лавров</h3>
-            <div class="trainers__overlay overlay">
+            <h3 class="juri__name">Алексей Лавров</h3>
+            <div class="juri__overlay overlay">
               <p class="overlay__title">Алексей Лавров</p>
               <p class="overlay__label">CrossFit</p>
               <ul class="overlay__list">
@@ -246,14 +254,14 @@
               </ul>
             </div>
           </li>
-          <li class="trainers__item swiper-slide" tabindex="0">
+          <li class="juri__item swiper-slide" tabindex="0">
             <picture>
               <source type="image/webp" srcset="./img/card-3.webp 1x, ./img/card-3@2x.webp 2x" width="260" height="300">
-              <img class="trainers__img" src="./img/card-3.jpg" srcset="./img/card-3@2x.jpg" alt="Фотография тренера."
+              <img class="juri__img" src="./img/card-3.jpg" srcset="./img/card-3@2x.jpg" alt="Фотография тренера."
                 width="260" height="300">
             </picture>
-            <h3 class="trainers__name">Александр Пашков</h3>
-            <div class="trainers__overlay overlay">
+            <h3 class="juri__name">Александр Пашков</h3>
+            <div class="juri__overlay overlay">
               <p class="overlay__title">Александр Пашков</p>
               <p class="overlay__label">CrossFit</p>
               <ul class="overlay__list">
@@ -263,14 +271,14 @@
               </ul>
             </div>
           </li>
-          <li class="trainers__item swiper-slide" tabindex="0">
+          <li class="juri__item swiper-slide" tabindex="0">
             <picture>
               <source type="image/webp" srcset="./img/card-4.webp 1x, ./img/card-4@2x.webp 2x" width="260" height="300">
-              <img class="trainers__img" src="./img/card-4.jpg" srcset="./img/card-4@2x.jpg" alt="Фотография тренера."
+              <img class="juri__img" src="./img/card-4.jpg" srcset="./img/card-4@2x.jpg" alt="Фотография тренера."
                 width="260" height="300">
             </picture>
-            <h3 class="trainers__name">Мария Кетова</h3>
-            <div class="trainers__overlay overlay">
+            <h3 class="juri__name">Мария Кетова</h3>
+            <div class="juri__overlay overlay">
               <p class="overlay__title">Мария Кетова</p>
               <p class="overlay__label">CrossFit</p>
               <ul class="overlay__list">
@@ -280,14 +288,14 @@
               </ul>
             </div>
           </li>
-          <li class="trainers__item swiper-slide" tabindex="0">
+          <li class="juri__item swiper-slide" tabindex="0">
             <picture>
               <source type="image/webp" srcset="./img/card-1.webp 1x, ./img/card-1@2x.webp 2x" width="260" height="300">
-              <img class="trainers__img" src="./img/card-1.jpg" srcset="./img/card-1@2x.jpg" alt="Фотография тренера."
+              <img class="juri__img" src="./img/card-1.jpg" srcset="./img/card-1@2x.jpg" alt="Фотография тренера."
                 width="260" height="300">
             </picture>
-            <h3 class="trainers__name">Анна Павлова</h3>
-            <div class="trainers__overlay overlay">
+            <h3 class="juri__name">Анна Павлова</h3>
+            <div class="juri__overlay overlay">
               <p class="overlay__title">Анна Павлова</p>
               <p class="overlay__label">CrossFit</p>
               <ul class="overlay__list">
@@ -297,14 +305,14 @@
               </ul>
             </div>
           </li>
-          <li class="trainers__item swiper-slide" tabindex="0">
+          <li class="juri__item swiper-slide" tabindex="0">
             <picture>
               <source type="image/webp" srcset="./img/card-2.webp 1x, ./img/card-2@2x.webp 2x" width="260" height="300">
-              <img class="trainers__img" src="./img/card-2.jpg" srcset="./img/card-2@2x.jpg" alt="Фотография тренера."
+              <img class="juri__img" src="./img/card-2.jpg" srcset="./img/card-2@2x.jpg" alt="Фотография тренера."
                 width="260" height="300">
             </picture>
-            <h3 class="trainers__name">Алексей Лавров</h3>
-            <div class="trainers__overlay overlay">
+            <h3 class="juri__name">Алексей Лавров</h3>
+            <div class="juri__overlay overlay">
               <p class="overlay__title">Алексей Лавров</p>
               <p class="overlay__label">CrossFit</p>
               <ul class="overlay__list">
@@ -314,14 +322,14 @@
               </ul>
             </div>
           </li>
-          <li class="trainers__item swiper-slide" tabindex="0">
+          <li class="juri__item swiper-slide" tabindex="0">
             <picture>
               <source type="image/webp" srcset="./img/card-3.webp 1x, ./img/card-3@2x.webp 2x" width="260" height="300">
-              <img class="trainers__img" src="./img/card-3.jpg" srcset="./img/card-3@2x.jpg" alt="Фотография тренера."
+              <img class="juri__img" src="./img/card-3.jpg" srcset="./img/card-3@2x.jpg" alt="Фотография тренера."
                 width="260" height="300">
             </picture>
-            <h3 class="trainers__name">Александр Пашков</h3>
-            <div class="trainers__overlay overlay">
+            <h3 class="juri__name">Александр Пашков</h3>
+            <div class="juri__overlay overlay">
               <p class="overlay__title">Александр Пашков</p>
               <p class="overlay__label">CrossFit</p>
               <ul class="overlay__list">
@@ -331,14 +339,14 @@
               </ul>
             </div>
           </li>
-          <li class="trainers__item swiper-slide" tabindex="0">
+          <li class="juri__item swiper-slide" tabindex="0">
             <picture>
               <source type="image/webp" srcset="./img/card-4.webp 1x, ./img/card-4@2x.webp 2x" width="260" height="300">
-              <img class="trainers__img" src="./img/card-4.jpg" srcset="./img/card-4@2x.jpg" alt="Фотография тренера."
+              <img class="juri__img" src="./img/card-4.jpg" srcset="./img/card-4@2x.jpg" alt="Фотография тренера."
                 width="260" height="300">
             </picture>
-            <h3 class="trainers__name">Мария Кетова</h3>
-            <div class="trainers__overlay overlay">
+            <h3 class="juri__name">Мария Кетова</h3>
+            <div class="juri__overlay overlay">
               <p class="overlay__title">Мария Кетова</p>
               <p class="overlay__label">CrossFit</p>
               <ul class="overlay__list">
@@ -587,10 +595,14 @@
           <li class="reviews__item swiper-slide">
             <div>
               <picture>
-                <source type="image/webp" media="(min-width: 768px)" srcset="./img/anna-orlova.webp 1x, ./img/anna-orlova@2x.webp 2x" width="80" height="80">
-                <source type="image/webp" srcset="./img/anna-orlova.webp 1x, ./img/anna-orlova@2x.webp 2x" width="68" height="68">
-                <source type="image/jpeg" media="(min-width: 768px)" srcset="./img/anna-orlova.jpg 1x, ./img/anna-orlova@2x.jpg 2x" width="80" height="80">
-                <img src="./img/anna-orlova.jpg" srcset="./img/anna-orlova@2x.jpg" alt="Анна Орлова." width="68" height="68">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="./img/anna-orlova.webp 1x, ./img/anna-orlova@2x.webp 2x" width="80" height="80">
+                <source type="image/webp" srcset="./img/anna-orlova.webp 1x, ./img/anna-orlova@2x.webp 2x" width="68"
+                  height="68">
+                <source type="image/jpeg" media="(min-width: 768px)"
+                  srcset="./img/anna-orlova.jpg 1x, ./img/anna-orlova@2x.jpg 2x" width="80" height="80">
+                <img src="./img/anna-orlova.jpg" srcset="./img/anna-orlova@2x.jpg" alt="Анна Орлова." width="68"
+                  height="68">
               </picture>
             </div>
             <div>
@@ -602,10 +614,14 @@
           <li class="reviews__item swiper-slide">
             <div>
               <picture>
-                <source type="image/webp" media="(min-width: 768px)" srcset="./img/anna-orlova.webp 1x, ./img/anna-orlova@2x.webp 2x" width="80" height="80">
-                <source type="image/webp" srcset="./img/anna-orlova.webp 1x, ./img/anna-orlova@2x.webp 2x" width="68" height="68">
-                <source type="image/jpeg" media="(min-width: 768px)" srcset="./img/anna-orlova.jpg 1x, ./img/anna-orlova@2x.jpg 2x" width="80" height="80">
-                <img src="./img/anna-orlova.jpg" srcset="./img/anna-orlova@2x.jpg" alt="Анна Орлова." width="68" height="68">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="./img/anna-orlova.webp 1x, ./img/anna-orlova@2x.webp 2x" width="80" height="80">
+                <source type="image/webp" srcset="./img/anna-orlova.webp 1x, ./img/anna-orlova@2x.webp 2x" width="68"
+                  height="68">
+                <source type="image/jpeg" media="(min-width: 768px)"
+                  srcset="./img/anna-orlova.jpg 1x, ./img/anna-orlova@2x.jpg 2x" width="80" height="80">
+                <img src="./img/anna-orlova.jpg" srcset="./img/anna-orlova@2x.jpg" alt="Анна Орлова." width="68"
+                  height="68">
               </picture>
             </div>
             <div>
@@ -617,10 +633,14 @@
           <li class="reviews__item swiper-slide">
             <div>
               <picture>
-                <source type="image/webp" media="(min-width: 768px)" srcset="./img/anna-orlova.webp 1x, ./img/anna-orlova@2x.webp 2x" width="80" height="80">
-                <source type="image/webp" srcset="./img/anna-orlova.webp 1x, ./img/anna-orlova@2x.webp 2x" width="68" height="68">
-                <source type="image/jpeg" media="(min-width: 768px)" srcset="./img/anna-orlova.jpg 1x, ./img/anna-orlova@2x.jpg 2x" width="80" height="80">
-                <img src="./img/anna-orlova.jpg" srcset="./img/anna-orlova@2x.jpg" alt="Анна Орлова." width="68" height="68">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="./img/anna-orlova.webp 1x, ./img/anna-orlova@2x.webp 2x" width="80" height="80">
+                <source type="image/webp" srcset="./img/anna-orlova.webp 1x, ./img/anna-orlova@2x.webp 2x" width="68"
+                  height="68">
+                <source type="image/jpeg" media="(min-width: 768px)"
+                  srcset="./img/anna-orlova.jpg 1x, ./img/anna-orlova@2x.jpg 2x" width="80" height="80">
+                <img src="./img/anna-orlova.jpg" srcset="./img/anna-orlova@2x.jpg" alt="Анна Орлова." width="68"
+                  height="68">
               </picture>
             </div>
             <div>
@@ -632,11 +652,15 @@
           <li class="reviews__item swiper-slide">
             <div>
               <picture>
-                <source type="image/webp" media="(min-width: 768px)" srcset="./img/anna-orlova.webp 1x, ./img/anna-orlova@2x.webp 2x" width="80" height="80">
-                <source type="image/webp" srcset="./img/anna-orlova.webp 1x, ./img/anna-orlova@2x.webp 2x" width="68" height="68">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="./img/anna-orlova.webp 1x, ./img/anna-orlova@2x.webp 2x" width="80" height="80">
+                <source type="image/webp" srcset="./img/anna-orlova.webp 1x, ./img/anna-orlova@2x.webp 2x" width="68"
+                  height="68">
 
-                <source type="image/jpeg" media="(min-width: 768px)" srcset="./img/anna-orlova.jpg 1x, ./img/anna-orlova@2x.jpg 2x" width="80" height="80">
-                <img src="./img/anna-orlova.jpg" srcset="./img/anna-orlova@2x.jpg" alt="Анна Орлова." width="68" height="68">
+                <source type="image/jpeg" media="(min-width: 768px)"
+                  srcset="./img/anna-orlova.jpg 1x, ./img/anna-orlova@2x.jpg 2x" width="80" height="80">
+                <img src="./img/anna-orlova.jpg" srcset="./img/anna-orlova@2x.jpg" alt="Анна Орлова." width="68"
+                  height="68">
               </picture>
             </div>
             <div>
@@ -648,26 +672,35 @@
           <li class="reviews__item swiper-slide">
             <div>
               <picture>
-                <source type="image/webp" media="(min-width: 768px)" srcset="./img/anna-orlova.webp 1x, ./img/anna-orlova@2x.webp 2x" width="80" height="80">
-                <source type="image/webp" srcset="./img/anna-orlova.webp 1x, ./img/anna-orlova@2x.webp 2x" width="68" height="68">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="./img/anna-orlova.webp 1x, ./img/anna-orlova@2x.webp 2x" width="80" height="80">
+                <source type="image/webp" srcset="./img/anna-orlova.webp 1x, ./img/anna-orlova@2x.webp 2x" width="68"
+                  height="68">
 
-                <source type="image/jpeg" media="(min-width: 768px)" srcset="./img/anna-orlova.jpg 1x, ./img/anna-orlova@2x.jpg 2x" width="80" height="80">
-                <img src="./img/anna-orlova.jpg" srcset="./img/anna-orlova@2x.jpg" alt="Анна Орлова." width="68" height="68">
+                <source type="image/jpeg" media="(min-width: 768px)"
+                  srcset="./img/anna-orlova.jpg 1x, ./img/anna-orlova@2x.jpg 2x" width="80" height="80">
+                <img src="./img/anna-orlova.jpg" srcset="./img/anna-orlova@2x.jpg" alt="Анна Орлова." width="68"
+                  height="68">
               </picture>
             </div>
             <div>
               <h3>Антонина Козлова</h3>
-              <p>«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажёры обновляют, персонал дружелюбный. Зал&nbsp;просторный, даже&nbsp;в&nbsp;вечернее время нет&nbsp;очередей»</p>
+              <p>«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажёры обновляют, персонал
+                дружелюбный. Зал&nbsp;просторный, даже&nbsp;в&nbsp;вечернее время нет&nbsp;очередей»</p>
             </div>
           </li>
           <li class="reviews__item swiper-slide">
             <div>
               <picture>
-                <source type="image/webp" media="(min-width: 768px)" srcset="./img/anna-orlova.webp 1x, ./img/anna-orlova@2x.webp 2x" width="80" height="80">
-                <source type="image/webp" srcset="./img/anna-orlova.webp 1x, ./img/anna-orlova@2x.webp 2x" width="68" height="68">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="./img/anna-orlova.webp 1x, ./img/anna-orlova@2x.webp 2x" width="80" height="80">
+                <source type="image/webp" srcset="./img/anna-orlova.webp 1x, ./img/anna-orlova@2x.webp 2x" width="68"
+                  height="68">
 
-                <source type="image/jpeg" media="(min-width: 768px)" srcset="./img/anna-orlova.jpg 1x, ./img/anna-orlova@2x.jpg 2x" width="80" height="80">
-                <img src="./img/anna-orlova.jpg" srcset="./img/anna-orlova@2x.jpg" alt="Анна Орлова." width="68" height="68">
+                <source type="image/jpeg" media="(min-width: 768px)"
+                  srcset="./img/anna-orlova.jpg 1x, ./img/anna-orlova@2x.jpg 2x" width="80" height="80">
+                <img src="./img/anna-orlova.jpg" srcset="./img/anna-orlova@2x.jpg" alt="Анна Орлова." width="68"
+                  height="68">
               </picture>
             </div>
             <div>
@@ -677,11 +710,11 @@
             </div>
           </li>
         </ul>
-        <button class="reviews__button reviews__button--prev swiper-button-prev"
-          type="button"><span class="visually-hidden">Предыдущий
+        <button class="reviews__button reviews__button--prev swiper-button-prev" type="button"><span
+            class="visually-hidden">Предыдущий
             отзыв</span></button>
-        <button class="reviews__button reviews__button--next swiper-button-next"
-          type="button"><span class="visually-hidden">Следующий
+        <button class="reviews__button reviews__button--next swiper-button-next" type="button"><span
+            class="visually-hidden">Следующий
             отзыв</span></button>
 
       </div>
@@ -691,11 +724,12 @@
         <div class="info__wrapper">
           <h2 class="info__title title ">Бесплатное занятие</h2>
           <form class="form" action="https://echo.htmlacademy.ru/." method="post">
-            <label class="form__text"><input class="form__input form__input--name" type="text" name="name" placeholder="Имя"
-                pattern="^[а-яА-Я\s]+$" title="Поле должно содержать только буквы и пробелы" required>
+            <label class="form__text"><input class="form__input form__input--name" type="text" name="name"
+                placeholder="Имя" pattern="^[а-яА-Я\s]+$" title="Поле должно содержать только буквы и пробелы" required>
               <span class="form__error form__error--name"></span></label>
-            <label class="form__text"><input class="form__input form__input--tel" type="tel" name="tel" placeholder="Телефон"
-              pattern="^[+78][0-9]{10}$" title="Пожалуйста, введите номер телефона в формате +7XXXXXXXXXX или 8XXXXXXXXXX" required>
+            <label class="form__text"><input class="form__input form__input--tel" type="tel" name="tel"
+                placeholder="Телефон" pattern="^[+78][0-9]{10}$"
+                title="Пожалуйста, введите номер телефона в формате +7XXXXXXXXXX или 8XXXXXXXXXX" required>
               <span class="form__error form__error--tel"></span></label>
             <button class="form__button button button--light" type="submit">Отправить</button>
           </form>

@@ -225,14 +225,6 @@
   }
 }
 
-.price__item:hover,
-.price__item:focus,
-.price__item:focus-visible {
-  border-image-source: linear-gradient(151deg, v.$red 0%, v.$blue 100%);
-  border-image-slice: 1;
-}
-
-
 .price__heading {
   font-weight: 700;
   font-size: 22px;
@@ -354,3 +346,12 @@
 .price__rub {
   color: v.$primary;
 }
+
+.price__item:hover,
+.price__item:focus,
+.price__item:focus-visible,
+.price__item:focus-within {
+  border-image-source: linear-gradient(151deg, v.$red 0%, v.$blue 100%);
+  border-image-slice: 1;
+}
+
