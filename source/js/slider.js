@@ -4,12 +4,12 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/mousewheel';
 
-const trainersSwiper = new Swiper('.trainers__swiper', {
+const trainersSwiper = new Swiper('.juri__swiper', {
   modules: [Navigation, Mousewheel ],
   loop: true,
   navigation: {
-    nextEl: '.trainers__button--next',
-    prevEl: '.trainers__button--prev',
+    nextEl: '.juri__button--next',
+    prevEl: '.juri__button--prev',
   },
   allowTouchMove: true,
   spaceBetween: 40,

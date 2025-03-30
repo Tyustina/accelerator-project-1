@@ -3,10 +3,7 @@ const videoButton = videoContainer.querySelector('.video__button');
 const videoLink = videoContainer.querySelector('.video__link');
 const videoPlaceholder = videoContainer.querySelector('.video__placeholder');
 
-const videoURL = 'https://www.youtube.com/embed/9TZXsZItgdw?si=j-uixdShC64SU4wE&autoplay=1';
-
 function playVideo () {
-  // videoLink.src = videoURL;
   videoLink.innerHTML = `
   <iframe width="100%" height="100%"
     src="https://www.youtube.com/embed/9TZXsZItgdw?si=j-uixdShC64SU4wE&autoplay=1"
@@ -23,7 +20,6 @@ function playVideo () {
     allowfullscreen>
   </iframe>
 `;
-
   videoPlaceholder.style.display = 'none';
   videoButton.style.display = 'none';
   videoContainer.classList.add('video--no-after');
