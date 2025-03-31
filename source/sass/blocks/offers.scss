@@ -189,6 +189,16 @@
   transition: 0.3s ease-in-out;
 }
 
+.offers__link--disabled {
+  opacity: 50%;
+  pointer-events: none;
+}
+
+.offers__link--dark.offers__link--disabled {
+  opacity: 30%;
+  pointer-events: none;
+}
+
 .offers__img {
   width: 100%;
   min-height: 360px;
@@ -207,7 +217,6 @@
   @include m.tablet {
     width: 400px;
     height: 462px;
-
   }
 
   @include m.desktop {

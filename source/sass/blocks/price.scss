@@ -53,8 +53,10 @@
 
   width: 290px;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
+  column-gap: 43px;
+  row-gap: 10px;
   margin: 0 auto 30px;
   border-bottom: 2px solid rgba(120, 120, 120, 0.2);
 
@@ -130,7 +132,7 @@
 }
 
 .price__tab:focus,
-.price__tab:focus-visible{
+.price__tab:focus-visible {
   color: v.$primary;
   opacity: 1;
 }
@@ -151,6 +153,7 @@
 
 .price__list {
   @include m.list-reset;
+
   position: relative;
   display: none;
 }

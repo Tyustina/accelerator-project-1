@@ -51,6 +51,7 @@
   text-decoration: underline;
 }
 
-.header__link:disabled {
+.header__link--disabled {
   color: v.$lightest-gray;
+  pointer-events: none;
 }

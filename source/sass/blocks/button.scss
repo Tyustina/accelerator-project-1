@@ -51,11 +51,6 @@
   color: v.$primary;
 }
 
-.button--light:disabled {
-  border-color: v.$white50;
-  color: v.$white50;
-}
-
 .button--dark:hover {
   border-image-source: linear-gradient(90deg, v.$red 0%, v.$blue 100%);
   border-image-slice: 1;
@@ -78,8 +73,18 @@
   border-right: v.$blue;
 }
 
-.button--dark:disabled {
-  border-color: v.$white30;
+.button--dark:disabled,
+.button--dark.button--disabled {
+  border-color: v.$primary30;
   background-color: transparent;
-  color: v.$white30;
+  color: v.$primary30;
+  letter-spacing: 0.05em;
+  pointer-events: none;
+}
+
+.button--light:disabled,
+.button--light.button--disabled {
+  border-color: v.$white50;
+  color: v.$white50;
+  pointer-events: none;
 }

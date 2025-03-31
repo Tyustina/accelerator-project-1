@@ -71,6 +71,11 @@
   align-items: center;
   max-width: 260px;
   margin: 0 auto;
+  background-color: v.$gray;
+}
+
+.juri .swiper-slide {
+  background-color: v.$gray;
 }
 
 .juri__img {
@@ -106,6 +111,7 @@
   @include m.only-mobile {
     display: none;
   }
+
   @include m.tablet {
     width: 50px;
     height: 50px;
@@ -123,6 +129,7 @@
   @include m.only-mobile {
     display: none;
   }
+
   @include m.tablet {
     display: flex;
     align-items: center;
@@ -188,7 +195,6 @@
 .juri__button--next:active::after {
   background-color: v.$white;
 }
-
 
 
 .juri__item:hover .overlay,

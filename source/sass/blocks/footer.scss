@@ -94,6 +94,7 @@
   left: 0;
 }
 
-.footer__link:disabled {
+.footer__link--disabled {
   opacity: 0.4;
+  pointer-events: none;
 }

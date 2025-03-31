@@ -87,18 +87,13 @@
   background: v.$primary;
 }
 
-.socials__link:disabled {
+.socials__link--disabled {
   background: v.$white30;
+  pointer-events: none;
 }
 
 .socials__link--vk:hover::after,
 .socials__link--reddit:hover::after,
 .socials__link--ok:hover::after {
   background-color: v.$white;
-}
-
-.socials__link--vk:disabled::after,
-.socials__link--reddit:disabled::after,
-.socials__link--ok:disabled::after {
-  background-color: v.$black;
 }

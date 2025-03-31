@@ -4,7 +4,7 @@
 .video {
   position: relative;
   width: 100%;
-  padding-bottom: 150px;
+  padding-bottom: 170px;
   height: auto;
   overflow: hidden;
 
@@ -36,12 +36,10 @@
 
   @include m.tablet {
     width: 270px;
-    // height: 170px;
   }
 
   @include m.desktop {
     width: 360px;
-    // height: 230px;
   }
 }
 
@@ -183,13 +181,13 @@
 }
 
 .video__button:disabled {
-  background: v.$white30;
+  background: v.$white40;
 }
 
 .video__button:disabled::after {
-  border-color: v.$primary30;
+  border-color: v.$primary40;
 }
 
 .video__button:disabled::before {
-  border-left: 10px solid v.$primary30;
+  border-left: 10px solid v.$primary40;
 }

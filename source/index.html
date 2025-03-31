@@ -5,11 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SUPERGYM</title>
-  <link rel="icon" type="image/png" sizes="96x96" href="./public/favicon-96x96.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="./public/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="./public/web-app-manifest-192x192.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="./public/web-app-manifest-512x512.png">
-  <link rel="icon" type="image/svg+xml" href="./public/favicon.svg">
+  <link rel="preload" href="fonts/alumnisans-semibold.woff2" type="font/woff2" as="font">
+  <link rel="preload" href="fonts/alumnisans-extrabold.woff2" type="font/woff2" as="font">
+  <link rel="preload" href="fonts/roboto-condensed-bold.woff2" type="font/woff2" as="font">
+  <link rel="preload" href="fonts/roboto-condensed-light.woff2" type="font/woff2" as="font">
+  <link rel="preload" href="fonts/roboto-condensed-regular.woff2" type="font/woff2" as="font">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" type="image/png" href="public/favicon-32x32.png">
   <link rel="stylesheet" href="sass/style.scss">
 </head>
 
@@ -64,16 +66,8 @@
             alt="Тренажерный зал.">
         </picture>
         <div class="video">
-          <button type="button" class="video__button"></button>
+          <button class="video__button" type="button"><span class="visually-hidden">Запустить видео.</span></button>
           <div class="video__link"></div>
-          <!-- <iframe class="video__link" width="100%" height="100%" src="#" title="Видео о тренажерном зале." allow="accelerometer;
-          autoplay;
-          clipboard-write;
-          encrypted-media;
-          gyroscope;
-          picture-in-picture;
-          web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy">
-        </iframe> -->
           <picture>
             <source type="image/webp"
               srcset="./img/video-placeholder-desk.webp 1x, ./img/video-placeholder-desk.webp 2x" width="270"
@@ -592,7 +586,7 @@
       <h2 class="reviews__title title">Отзывы</h2>
       <div class="reviews__swiper swiper">
         <ul class="reviews__list swiper-wrapper">
-          <li class="reviews__item swiper-slide">
+          <li class="reviews__item swiper-slide" tabindex="0">
             <div>
               <picture>
                 <source type="image/webp" media="(min-width: 768px)"
@@ -611,7 +605,7 @@
                 дружелюбный. Зал&nbsp;просторный, даже&nbsp;в&nbsp;вечернее время нет&nbsp;очередей»</p>
             </div>
           </li>
-          <li class="reviews__item swiper-slide">
+          <li class="reviews__item swiper-slide" tabindex="0">
             <div>
               <picture>
                 <source type="image/webp" media="(min-width: 768px)"
@@ -630,7 +624,7 @@
                 дружелюбный. Зал&nbsp;просторный, даже&nbsp;в&nbsp;вечернее время нет&nbsp;очередей»</p>
             </div>
           </li>
-          <li class="reviews__item swiper-slide">
+          <li class="reviews__item swiper-slide" tabindex="0">
             <div>
               <picture>
                 <source type="image/webp" media="(min-width: 768px)"
@@ -649,7 +643,7 @@
                 дружелюбный. Зал&nbsp;просторный, даже&nbsp;в&nbsp;вечернее время нет&nbsp;очередей»</p>
             </div>
           </li>
-          <li class="reviews__item swiper-slide">
+          <li class="reviews__item swiper-slide" tabindex="0">
             <div>
               <picture>
                 <source type="image/webp" media="(min-width: 768px)"
@@ -669,7 +663,7 @@
                 дружелюбный. Зал&nbsp;просторный, даже&nbsp;в&nbsp;вечернее время нет&nbsp;очередей»</p>
             </div>
           </li>
-          <li class="reviews__item swiper-slide">
+          <li class="reviews__item swiper-slide" tabindex="0">
             <div>
               <picture>
                 <source type="image/webp" media="(min-width: 768px)"
@@ -689,7 +683,7 @@
                 дружелюбный. Зал&nbsp;просторный, даже&nbsp;в&nbsp;вечернее время нет&nbsp;очередей»</p>
             </div>
           </li>
-          <li class="reviews__item swiper-slide">
+          <li class="reviews__item swiper-slide" tabindex="0">
             <div>
               <picture>
                 <source type="image/webp" media="(min-width: 768px)"
@@ -726,11 +720,11 @@
           <form class="form" action="https://echo.htmlacademy.ru/." method="post">
             <label class="form__text"><input class="form__input form__input--name" type="text" name="name"
                 placeholder="Имя" pattern="^[а-яА-Я\s]+$" title="Поле должно содержать только буквы и пробелы" required>
-              <span class="form__error form__error--name"></span></label>
+              <span class="form__error form__error--name"></span><span class="visually-hidden">Имя</span></label>
             <label class="form__text"><input class="form__input form__input--tel" type="tel" name="tel"
                 placeholder="Телефон" pattern="^[+78][0-9]{10}$"
                 title="Пожалуйста, введите номер телефона в формате +7XXXXXXXXXX или 8XXXXXXXXXX" required>
-              <span class="form__error form__error--tel"></span></label>
+              <span class="form__error form__error--tel"></span><span class="visually-hidden">Телефон</span></label>
             <button class="form__button button button--light" type="submit">Отправить</button>
           </form>
         </div>
